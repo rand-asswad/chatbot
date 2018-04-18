@@ -48,4 +48,4 @@ add_executable(chatbot
         src/Client/GUI/GUIclient.h
         src/Client/Web/WebClient.cpp
         src/Client/Web/WebClient.h
-        src/Client/Client.h)
+        src/Client/Client.h src/Client/Console/main.cpp)

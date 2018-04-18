@@ -1,38 +1,26 @@
-/**
- * Project ChatBot
- */
-
-
 #ifndef _ELIZA_H
 #define _ELIZA_H
 
 #include "../Agent.h"
+#include "Memory.h"
+#include "ScriptParser.h"
+#include "Key.h"
+#include <iostream>
+#include <vector>
 
+using namespace std;
 
-class Eliza: public Agent {
+class Eliza : public Agent {
 public: 
     ScriptParser script;
     Memory memory;
     
-    /**
-     * @param in
-     * @param out
-     * @param scriptPath
-     */
-    void Eliza(istream in, ostream out, String scriptPath);
+    void Eliza(istream*, ostream*, string);
+
 private: 
-    
-    /**
-     * @param input
-     */
-    String processInput(String input);
-    
-    /**
-     * @param input
-     */
-    vector<Keys> findKeys(String input);
-    
-    void processScript();
+    string processInput(string input);
+    vector<Key> findKeys(string input);
+    void processScript() override ;
 };
 
 #endif //_ELIZA_H

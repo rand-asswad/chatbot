@@ -1,30 +1,19 @@
-/**
- * Project ChatBot
- */
-
-
 #ifndef _AGENT_H
 #define _AGENT_H
 
+#include <iostream>
+using namespace std;
+
 class Agent {
 public: 
-    String name;
-    istream inputStream;
-    ostream outputStream;
+    string name;
+    istream* inputStream;
+    ostream* outputStream;
     
-    /**
-     * @param istream
-     * @param ostream
-     */
-    void Agent(void istream, void ostream);
-    
+    Agent(istream*, ostream*);
     void run();
-protected: 
-    
-    /**
-     * @param input
-     */
-    String processInput(String input);
+protected:
+    virtual string processInput(string) = 0;
 };
 
 #endif //_AGENT_H

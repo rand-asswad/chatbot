@@ -1,38 +1,16 @@
-/**
- * Project ChatBot
- */
-
-
 #include "Eliza.h"
 
-/**
- * Eliza implementation
- */
-
-
-/**
- * @param in
- * @param out
- * @param scriptPath
- */
-void Eliza::Eliza(istream in, ostream out, String scriptPath) {
-
+Eliza::Eliza(istream* in, ostream* out, string scriptPath) : Agent(in, out) {
+    this->name = "Eliza";
+    this->script = ScriptParser(scriptPath);
 }
 
-/**
- * @param input
- * @return String
- */
-String Eliza::processInput(String input) {
-    return "";
+string Eliza::processInput(string input) {
+    return input;
 }
 
-/**
- * @param input
- * @return vector<Keys>
- */
-vector<Keys> Eliza::findKeys(String input) {
-    return null;
+vector<Key> Eliza::findKeys(string input) {
+    return vector<Key>();
 }
 
 void Eliza::processScript() {

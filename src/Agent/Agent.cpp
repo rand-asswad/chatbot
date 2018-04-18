@@ -1,31 +1,19 @@
-/**
- * Project ChatBot
- */
-
-
 #include "Agent.h"
 
-/**
- * Agent implementation
- */
+using namespace std;
 
-
-/**
- * @param istream
- * @param ostream
- */
-void Agent::Agent(void istream, void ostream) {
-
+Agent::Agent(istream* input, ostream* output) {
+    this->inputStream = input;
+    this->outputStream = output;
 }
 
 void Agent::run() {
-
-}
-
-/**
- * @param input
- * @return String
- */
-String Agent::processInput(String input) {
-    return "";
+    *(this->outputStream) << "Hello, I'm " << this->name;
+    *(this->outputStream) << ". How can I help you today?" << endl;
+    string userInput;
+    do {
+        *(this->outputStream) << ">>> ";
+        getline(*(this->inputStream), userInput);
+        *(this->outputStream) << this->processInput(userInput) << endl;
+    } while (userInput != "END.");
 }

@@ -1,25 +1,10 @@
-/**
- * Project ChatBot
- */
-
-
 #include "Parser.h"
 
-/**
- * Parser implementation
- */
 
-
-/**
- * @param sourcePath
- */
-void Parser::Parser(String sourcePath) {
+Parser::Parser(string sourcePath) {
 
 }
 
-/**
- * @param sourcePath
- */
-void Parser::parse(String sourcePath) {
+void Parser::parse(string sourcePath) {
 
 }
