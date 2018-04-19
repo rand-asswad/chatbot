@@ -11,7 +11,7 @@
 
 
 /**
- * @param kb
+ * @param kb to be defined in doxygen
  */
 void KBAgent::KBAgent(KB kb) {
 
