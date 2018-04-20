@@ -22,6 +22,6 @@ int TerminalClient::Main(int argc, char* argv[]) {
 /**
  * @return String
  */
-String TerminalClient::getAgentName() {
+string TerminalClient::getAgentName() {
     return "";
 }

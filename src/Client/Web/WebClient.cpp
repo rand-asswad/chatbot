@@ -10,6 +10,6 @@
  */
 
 
-static void WebClient::send() {
+void WebClient::send() {
 
 }

@@ -12,7 +12,7 @@ using namespace std;
 
 class Eliza : public Agent {
 public: 
-    ScriptParser script;
+    ScriptParser* script;
     Memory memory;
 
     Eliza(istream *input, ostream *output, string sourcePath);

@@ -20,6 +20,24 @@ add_executable(chatbot
         src/Agent/ELIZA/Synonyms.h
         src/Agent/ELIZA/Thesaurus.cpp
         src/Agent/ELIZA/Thesaurus.h
+        src/Agent/KnowledgeBase/Action.cpp
+        src/Agent/KnowledgeBase/Action.h
+        src/Agent/KnowledgeBase/Analyser.cpp
+        src/Agent/KnowledgeBase/Analyser.h
+        src/Agent/KnowledgeBase/FLAnalyser.cpp
+        src/Agent/KnowledgeBase/FLAnalyser.h
+        src/Agent/KnowledgeBase/KB.cpp
+        src/Agent/KnowledgeBase/KB.h
+        src/Agent/KnowledgeBase/KBAgent.cpp
+        src/Agent/KnowledgeBase/KBAgent.h
+        src/Agent/KnowledgeBase/KBAnalyser.cpp
+        src/Agent/KnowledgeBase/KBAnalyser.h
+        src/Agent/KnowledgeBase/Percept.cpp
+        src/Agent/KnowledgeBase/Percept.h
+        src/Agent/KnowledgeBase/Rule.cpp
+        src/Agent/KnowledgeBase/Rule.h
+        src/Agent/KnowledgeBase/Sentence.cpp
+        src/Agent/KnowledgeBase/Sentence.h
         src/Agent/Agent.cpp
         src/Agent/Agent.h
         src/Agent/Parser.cpp

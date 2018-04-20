@@ -22,12 +22,14 @@ public:
     Thesaurus thes;
 
     ScriptParser(const string &sourcePath);
+
     string pre_translate(string s );
     string post_translate(string s );
 private: 
     void parse();
     vector<string> splitStr(string str, char delimiter);
     void stripExtraWhiteSpace();
+    string regexPattern(string key);
 };
 
 #endif //_SCRIPTPARSER_H

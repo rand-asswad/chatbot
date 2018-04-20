@@ -5,9 +5,9 @@
 #include "../Parser.h"
 
 
-class KBAnalyser: public Analyser, public Parser {
+class KBAnalyser: public Analyser {
 public:
-    KBAnalyser(const string &sourcePath);
+    KBAnalyser();
 };
 
 #endif //_KBANALYSER_H

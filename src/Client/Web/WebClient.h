@@ -10,8 +10,8 @@
 
 
 class WebClient: public Client {
-public: 
-    
+public:
+
     static void send();
 };
 

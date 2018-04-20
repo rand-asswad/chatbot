@@ -12,11 +12,12 @@ int main() {
     ostream* outputStream = &cout;
 
     // Initialize chatbot
-    int bot = chooseAgent();
+    int bot = 1;//chooseAgent();
     string srcPath = "src/Agent/";
     if (bot==1) {
         srcPath += "ELIZA/scripts/original";
         Eliza agent = Eliza(inputStream, outputStream, srcPath);
+        //agent.run();
     } else {
         //KBAgent agent = KBAgent(kb);
     }
