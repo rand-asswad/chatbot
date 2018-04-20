@@ -1,45 +1,27 @@
-/**
- * Project ChatBot
- */
-
-
 #include "ScriptParser.h"
 
-/**
- * ScriptParser implementation
- */
+ScriptParser::ScriptParser(const string &sourcePath) : Parser(sourcePath) {
+    this->initial = this->final = "";
+    this->keys = vector<Key>();
+    this->pre = this->post = Mapper();
+    this->quit = vector<string>();
+    this->thes = Thesaurus();
+}
 
-
-/**
- * @param s 
- * @return String
- */
-String ScriptParser::pre_translate(String s ) {
+string ScriptParser::pre_translate(string s ) {
     return "";
 }
 
-/**
- * @param s 
- * @return String
- */
-String ScriptParser::post_translate(String s ) {
+string ScriptParser::post_translate(string s ) {
     return "";
 }
 
-/**
- * @param sourcePath
- */
-void ScriptParser::parse(String sourcePath ) {
+void ScriptParser::parse() {
 
 }
 
-/**
- * @param str
- * @param delimiter
- * @return vector<String>
- */
-vector<String> ScriptParser::splitStr(String str, char delimiter) {
-    return null;
+vector<string> ScriptParser::splitStr(string str, char delimiter) {
+    return vector<string>();
 }
 
 void ScriptParser::stripExtraWhiteSpace() {

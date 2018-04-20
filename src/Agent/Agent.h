@@ -10,7 +10,7 @@ public:
     istream* inputStream;
     ostream* outputStream;
     
-    Agent(istream*, ostream*);
+    Agent(istream* input, ostream* output);
     void run();
 protected:
     virtual string processInput(string) = 0;

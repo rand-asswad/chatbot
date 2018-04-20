@@ -1,29 +1,19 @@
-/**
- * Project ChatBot
- */
-
-
 #ifndef _MAPPER_H
 #define _MAPPER_H
 
-#include "../../CppContainers/map.h"
+#include <iostream>
+#include <map>
 
+using namespace std;
 
-class Mapper: public map {
+class Mapper: public map<string, string> {
 public: 
     
-    void Mapper();
+    Mapper();
     
-    /**
-     * @param src
-     * @param dst
-     */
-    void map(String src, String dst);
+    void map(string src, string dst);
     
-    /**
-     * @param str
-     */
-    String translate(String str);
+    string translate(string str);
     class AssociationClass1 {
     };
 };

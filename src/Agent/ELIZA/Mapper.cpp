@@ -1,34 +1,14 @@
-/**
- * Project ChatBot
- */
-
-
 #include "Mapper.h"
 
-/**
- * Mapper implementation
- */
 
-
-void Mapper::Mapper() {
+Mapper::Mapper() {
 
 }
 
-/**
- * @param src
- * @param dst
- */
-void Mapper::map(String src, String dst) {
+void Mapper::map(string src, string dst) {
 
 }
 
-/**
- * @param str
- * @return String
- */
-String Mapper::translate(String str) {
+string Mapper::translate(string str) {
     return "";
 }
-/**
- * AssociationClass1 implementation
- */

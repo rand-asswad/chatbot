@@ -1,8 +1,8 @@
 #include "Eliza.h"
 
-Eliza::Eliza(istream* in, ostream* out, string scriptPath) : Agent(in, out) {
-    this->name = "Eliza";
-    this->script = ScriptParser(scriptPath);
+Eliza::Eliza(istream *input, ostream *output, string sourcePath) : Agent(input, output) {
+    this->script = ScriptParser(sourcePath);
+    this->memory = Memory();
 }
 
 string Eliza::processInput(string input) {

@@ -1,32 +1,22 @@
-/**
- * Project ChatBot
- */
-
-
 #ifndef _KEY_H
 #define _KEY_H
 
-#include "../../CppContainers/vector.h"
+#include "Decomp.h"
 
+#include <iostream>
+#include <vector>
+using namespace std;
 
-class Key: public vector {
+class Key {
 public: 
-    String name;
-    Integer rank;
+    string name;
+    int rank;
     vector<Decomp> decomp;
     
-    /**
-     * @param s 
-     * @param i 
-     * @param j
-     */
-    void Key(String s , Integer i , Integer j );
+    Key(string s , int i , int j );
 private: 
     
-    /**
-     * @param s
-     */
-    String decompose(String s );
+    string decompose(string s );
 };
 
 #endif //_KEY_H

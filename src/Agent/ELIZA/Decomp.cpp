@@ -1,34 +1,13 @@
-/**
- * Project ChatBot
- */
-
-
 #include "Decomp.h"
 
-/**
- * Decomp implementation
- */
-
-
-/**
- * @param p
- * @param m
- */
-void Decomp::Decomp(String p, Boolean m) {
+Decomp::Decomp(string p, bool m) {
 
 }
 
-/**
- * @return String
- */
-String Decomp::nextRule() {
+string Decomp::nextRule() {
     return "";
 }
 
-/**
- * @param s 
- * @return String
- */
-String Decomp::assemble(String s ) {
+string Decomp::assemble(string s ) {
     return "";
 }

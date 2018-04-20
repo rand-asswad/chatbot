@@ -1,11 +1,15 @@
 #ifndef _PARSER_H
 #define _PARSER_H
 
+#include <iostream>
+using namespace std;
+
 class Parser {
-public: 
+public:
+    string sourcePath;
     Parser(string sourcePath);
 private: 
-    void parse(string sourcePath);
+    void parse();
 };
 
 #endif //_PARSER_H

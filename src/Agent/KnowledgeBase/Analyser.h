@@ -1,8 +1,3 @@
-/**
- * Project ChatBot
- */
-
-
 #ifndef _ANALYSER_H
 #define _ANALYSER_H
 
@@ -11,13 +6,9 @@
 
 class Analyser: public Parser {
 public: 
-    Lexer lexer;
+    //Lexer lexer;
     
-    /**
-     * @param words
-     * @param grammar
-     */
-    ParseTree parse(String words, Grammar grammar);
+    //ParseTree parse(String words, Grammar grammar);
 };
 
 #endif //_ANALYSER_H

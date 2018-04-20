@@ -1,62 +1,33 @@
-/**
- * Project ChatBot
- */
-
-
 #ifndef _KB_H
 #define _KB_H
 
+#include <vector>
+#include "Sentence.h"
+#include "KBAnalyser.h"
+#include "Rule.h"
+
 class KB {
 public: 
-    
-    /**
-     * @param kb 
-     * @param s
-     */
+
     void tell(KB kb , vector<Sentence> s);
     
-    /**
-     * @param kb 
-     * @param s
-     */
     vector<Sentence> ask(KB kb , vector<Sentence> s);
     
-    /**
-     * @param kb 
-     * @param s
-     */
-    Boolean entails(KB kb , vector<Sentence> s);
+    bool entails(KB kb , vector<Sentence> s);
     
-    /**
-     * @param kb 
-     * @param s
-     */
     void forwardChain(KB kb , vector<Sentence> s);
     
-    /**
-     * @param kb 
-     * @param query
-     */
-    Boolean backwardChain(KB kb , vector<Sentence> query);
+    bool backwardChain(KB kb , vector<Sentence> query);
     
-    /**
-     * @param examples
-     */
     vector<Sentence> train(vector<vector<Sentence>> examples);
     
-    /**
-     * @param kb
-     */
     int nbRules(KB kb);
     
-    /**
-     * @param kn
-     */
     int nbFacts(KB kn);
 private: 
     vector<Sentence> facts;
     KBAnalyser analyser;
-    CNF cnfclause;
+    //CNF cnfclause;
     vector<Rule> rules;
 };
 

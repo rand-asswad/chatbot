@@ -1,46 +1,32 @@
-/**
- * Project ChatBot
- */
-
-
 #ifndef _SCRIPTPARSER_H
 #define _SCRIPTPARSER_H
 
 #include "../Parser.h"
+#include "Mapper.h"
+#include "Key.h"
+#include "Thesaurus.h"
 
+#include <iostream>
+#include <vector>
+
+using namespace std;
 
 class ScriptParser: public Parser {
 public: 
-    String initial;
-    String final;
+    string initial;
+    string final;
     Mapper pre;
     Mapper post;
     vector<Key> keys;
-    vector<String> quit;
+    vector<string> quit;
     Thesaurus thes;
-    
-    /**
-     * @param s
-     */
-    String pre_translate(String s );
-    
-    /**
-     * @param s
-     */
-    String post_translate(String s );
+
+    ScriptParser(const string &sourcePath);
+    string pre_translate(string s );
+    string post_translate(string s );
 private: 
-    
-    /**
-     * @param sourcePath
-     */
-    void parse(String sourcePath );
-    
-    /**
-     * @param str
-     * @param delimiter
-     */
-    vector<String> splitStr(String str, char delimiter);
-    
+    void parse();
+    vector<string> splitStr(string str, char delimiter);
     void stripExtraWhiteSpace();
 };
 

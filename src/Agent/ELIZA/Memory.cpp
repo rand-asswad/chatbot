@@ -1,22 +1,9 @@
-/**
- * Project ChatBot
- */
-
-
 #include "Memory.h"
 
-/**
- * Memory implementation
- */
-
-
-void Memory::Memory() {
+Memory::Memory() {
 
 }
 
-/**
- * @param String
- */
-void Memory::save(void String) {
+void Memory::save(string str) {
 
 }

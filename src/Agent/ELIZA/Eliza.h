@@ -14,13 +14,13 @@ class Eliza : public Agent {
 public: 
     ScriptParser script;
     Memory memory;
-    
-    void Eliza(istream*, ostream*, string);
 
-private: 
-    string processInput(string input);
+    Eliza(istream *input, ostream *output, string sourcePath);
+
+private:
+    string processInput(string input) override ;
     vector<Key> findKeys(string input);
-    void processScript() override ;
+    void processScript();
 };
 
 #endif //_ELIZA_H

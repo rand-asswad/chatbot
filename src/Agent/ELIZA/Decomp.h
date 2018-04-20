@@ -1,34 +1,24 @@
-/**
- * Project ChatBot
- */
-
-
 #ifndef _DECOMP_H
 #define _DECOMP_H
 
-#include "../../CppContainers/vector.h"
+#include <iostream>
+#include <vector>
 
+using namespace std;
 
-class Decomp: public vector {
+class Decomp {
 public: 
-    String pattern;
-    Integer reassembRule;
-    vector<String> reassemb;
+    string pattern;
+    int reassembRule;
+    vector<string> reassemb;
     
-    /**
-     * @param p
-     * @param m
-     */
-    void Decomp(String p, Boolean m);
+    Decomp(string p, bool m);
 private: 
-    Boolean mem;
+    bool mem;
     
-    String nextRule();
+    string nextRule();
     
-    /**
-     * @param s
-     */
-    String assemble(String s );
+    string assemble(string s );
 };
 
 #endif //_DECOMP_H

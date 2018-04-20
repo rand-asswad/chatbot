@@ -1,21 +1,16 @@
-/**
- * Project ChatBot
- */
-
-
 #ifndef _SYNONYMS_H
 #define _SYNONYMS_H
 
-#include "../../CppContainers/vector.h"
+#include <iostream>
+#include <vector>
+
+using namespace std;
 
 
-class Synonyms: private vector {
+class Synonyms: private vector<string> {
 public: 
     
-    /**
-     * @param word
-     */
-    Boolean hasWord(String word);
+    bool hasWord(string word);
 };
 
 #endif //_SYNONYMS_H

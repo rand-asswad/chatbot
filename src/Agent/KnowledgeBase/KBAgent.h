@@ -1,12 +1,10 @@
-/**
- * Project ChatBot
- */
-
-
 #ifndef _KBAGENT_H
 #define _KBAGENT_H
 
 #include "../Agent.h"
+#include "Percept.h"
+#include "Action.h"
+#include "KB.h"
 
 
 class KBAgent: public Agent {
@@ -14,10 +12,7 @@ public:
     Percept current_percept;
     Action current_action;
     
-    /**
-     * @param kb
-     */
-    void KBAgent(KB kb);
+    KBAgent(KB kb);
 protected: 
     KB knowledge_base;
 private: 

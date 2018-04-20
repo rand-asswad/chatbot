@@ -1,26 +1,18 @@
-/**
- * Project ChatBot
- */
-
-
 #ifndef _MEMORY_H
 #define _MEMORY_H
 
-#include "../../CppContainers/vector.h"
-#include "../../CppContainers/vector.h"
+#include <iostream>
+#include <vector>
+using namespace std;
 
-
-class Memory: public vector, public Memory, public vector {
+class Memory: public vector<string> {
 public: 
     
-    void Memory();
+    Memory();
     
-    /**
-     * @param String
-     */
-    void save(void String);
+    void save(string);
 private: 
-    Integer max;
+    int max;
 };
 
 #endif //_MEMORY_H

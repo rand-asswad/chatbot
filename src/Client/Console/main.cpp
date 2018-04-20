@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../../Agent/ELIZA/Eliza.h"
-#include "../../Agent/KnowledgeBase/KBAgent.h"
+//#include "../../Agent/KnowledgeBase/KBAgent.h"
 
 using namespace std;
 
@@ -13,16 +13,16 @@ int main() {
 
     // Initialize chatbot
     int bot = chooseAgent();
-    Agent agent;
     string srcPath = "src/Agent/";
     if (bot==1) {
         srcPath += "ELIZA/scripts/original";
-        agent = Eliza(inputStream, outputStream, srcPath);
+        Eliza agent = Eliza(inputStream, outputStream, srcPath);
     } else {
+        //KBAgent agent = KBAgent(kb);
     }
 
     // Run Chatbot
-    agent.run();
+    //agent.run();
 
     return EXIT_SUCCESS;
 }

@@ -1,10 +1,3 @@
-/**
- * Project ChatBot
- */
-
-
 #include "KBAnalyser.h"
 
-/**
- * KBAnalyser implementation
- */
+KBAnalyser::KBAnalyser(const string &sourcePath) : Parser(sourcePath) {}
