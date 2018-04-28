@@ -17,7 +17,7 @@ int main() {
     if (bot==1) {
         srcPath += "ELIZA/scripts/original";
         Eliza agent = Eliza(inputStream, outputStream, srcPath);
-        //agent.run();
+        //cout << *(agent.script) << endl;
     } else {
         //KBAgent agent = KBAgent(kb);
     }

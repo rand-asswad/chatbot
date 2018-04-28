@@ -11,9 +11,10 @@ public:
     string pattern;
     int reassembRule;
     vector<string> reassemb;
-    
-    Decomp(string p, bool m);
-private: 
+
+    Decomp(const string &pattern, bool mem);
+
+private:
     bool mem;
     
     string nextRule();

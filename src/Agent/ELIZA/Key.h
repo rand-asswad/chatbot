@@ -12,10 +12,10 @@ public:
     string name;
     int rank;
     vector<Decomp> decomp;
-    
-    Key(string s , int i , int j );
-private: 
-    
+
+    Key(const string &name, int rank);
+
+private:
     string decompose(string s );
 };
 

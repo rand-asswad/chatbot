@@ -6,10 +6,10 @@
 #include <iostream>
 using namespace std;
 
-class Thesaurus {
+class Thesaurus : public vector<Synonyms> {
 public: 
     
-    Thesaurus();
+    Thesaurus() = default;
     
     Synonyms findSynonyms(string word);
 };

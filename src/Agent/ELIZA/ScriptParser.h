@@ -25,11 +25,14 @@ public:
 
     string pre_translate(string s );
     string post_translate(string s );
-private: 
+
+    friend ostream &operator<<(ostream &os, const ScriptParser &parser);
+
+private:
     void parse();
     vector<string> splitStr(string str, char delimiter);
-    void stripExtraWhiteSpace();
-    string regexPattern(string key);
+    vector<string> splitByWhitespace(string str);
+    string extractPattern(string line, string key);
 };
 
 #endif //_SCRIPTPARSER_H

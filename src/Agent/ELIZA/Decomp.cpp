@@ -1,8 +1,5 @@
 #include "Decomp.h"
 
-Decomp::Decomp(string p, bool m) {
-
-}
 
 string Decomp::nextRule() {
     return "";
@@ -10,4 +7,8 @@ string Decomp::nextRule() {
 
 string Decomp::assemble(string s ) {
     return "";
+}
+
+Decomp::Decomp(const string &pattern, bool mem) : pattern(pattern), mem(mem) {
+    this->reassemb = vector<string>();
 }
