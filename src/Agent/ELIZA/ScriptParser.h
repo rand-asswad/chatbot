@@ -23,15 +23,14 @@ public:
 
     ScriptParser(const string &sourcePath);
 
-    string pre_translate(string s );
-    string post_translate(string s );
+    string pre_translate(string);
+    string post_translate(string);
 
     friend ostream &operator<<(ostream &os, const ScriptParser &parser);
 
+    Key* findKey(string word);
 private:
     void parse();
-    vector<string> splitStr(string str, char delimiter);
-    vector<string> splitByWhitespace(string str);
     string extractPattern(string line, string key);
 };
 

@@ -8,12 +8,12 @@ Agent::Agent(istream* input, ostream* output) {
 }
 
 void Agent::run() {
-    *(this->outputStream) << "Hello, I'm " << this->name;
-    *(this->outputStream) << ". How can I help you today?" << endl;
     string userInput;
-    do {
-        *(this->outputStream) << ">>> ";
+    this->quit = false;
+    *(this->outputStream) << this->greetUser() << endl;
+    while (!quit) {
+        *(this->outputStream) << "> ";
         getline(*(this->inputStream), userInput);
         *(this->outputStream) << this->processInput(userInput) << endl;
-    } while (userInput != "END.");
+    }
 }

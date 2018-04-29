@@ -9,8 +9,7 @@ using namespace std;
 class Mapper: public map<string, string> {
 public: 
     
-    Mapper();
-    
+    Mapper() = default;
     void map(string src, string dst);
     
     string translate(string str);

@@ -1,5 +1,6 @@
 #include "Thesaurus.h"
 
 Synonyms Thesaurus::findSynonyms(string word) {
-    return Synonyms(vector<string>());
+    for (Synonyms syn : *this) if (syn.hasWord(word)) return syn;
+    return Synonyms(word);
 }

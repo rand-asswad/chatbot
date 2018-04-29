@@ -1,7 +1,13 @@
 #include "Synonyms.h"
 
+Synonyms::Synonyms(const vector<string> &__x) : vector(__x) {}
+
 bool Synonyms::hasWord(string word) {
-    return NULL;
+    for (string w: *this) if (w.compare(word)) return true;
+    return false;
 }
 
-Synonyms::Synonyms(const vector<string> &__x) : vector(__x) {}
+Synonyms::Synonyms(const string word) : vector<string>(){
+    this->push_back(word);
+}
+

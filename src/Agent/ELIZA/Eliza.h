@@ -19,6 +19,9 @@ public:
 
 private:
     string processInput(string input) override ;
+    string greetUser() override ;
+
+    string processSentence(string input);
     vector<Key> findKeys(string input);
     void processScript();
 };

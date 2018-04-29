@@ -8,7 +8,7 @@ using namespace std;
 class Memory: public vector<string> {
 public: 
     
-    Memory();
+    Memory() = default;
     
     void save(string);
 private: 

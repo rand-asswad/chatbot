@@ -9,6 +9,7 @@ using namespace std;
 
 class Synonyms: public vector<string> {
 public:
+    Synonyms(const string word);
     Synonyms(const vector<string> &__x);
 
     bool hasWord(string word);

@@ -9,17 +9,15 @@ using namespace std;
 class Decomp {
 public: 
     string pattern;
-    int reassembRule;
+    size_t reassembRule;
     vector<string> reassemb;
 
     Decomp(const string &pattern, bool mem);
 
 private:
     bool mem;
-    
     string nextRule();
-    
-    string assemble(string s );
+    string assemble(string s);
 };
 
 #endif //_DECOMP_H

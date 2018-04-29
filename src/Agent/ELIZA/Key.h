@@ -14,9 +14,8 @@ public:
     vector<Decomp> decomp;
 
     Key(const string &name, int rank);
-
 private:
-    string decompose(string s );
+    string decompose(string s);
 };
 
 #endif //_KEY_H

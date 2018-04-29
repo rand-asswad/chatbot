@@ -1,6 +1,7 @@
 #include <fstream>
 #include <regex>
 #include "ScriptParser.h"
+#include "../../utils.h"
 
 ScriptParser::ScriptParser(const string &sourcePath) : Parser(sourcePath) {
     this->initial = this->final = "";
@@ -12,12 +13,12 @@ ScriptParser::ScriptParser(const string &sourcePath) : Parser(sourcePath) {
     this->parse();
 }
 
-string ScriptParser::pre_translate(string s ) {
-    return "";
+string ScriptParser::pre_translate(string str) {
+    return this->pre.translate(str);
 }
 
-string ScriptParser::post_translate(string s ) {
-    return "";
+string ScriptParser::post_translate(string str) {
+    return this->post.translate(str);
 }
 
 void ScriptParser::parse() {
@@ -51,20 +52,20 @@ void ScriptParser::parse() {
                 this->quit.push_back(match);
                 break;
             case 3: // pre
-                word = splitByWhitespace(match);
+                word = split(match);
                 this->pre.map(word.at(0), word.at(1));
                 word.clear();
                 break;
             case 4: // post
-                word = splitByWhitespace(match);
+                word = split(match);
                 this->post.map(word.at(0), word.at(1));
                 word.clear();
                 break;
             case 5: // synon
-                this->thes.push_back(Synonyms(splitByWhitespace(match)));
+                this->thes.push_back(Synonyms(split(match)));
                 break;
             case 6: // key
-                word = splitByWhitespace(match);
+                word = split(match);
                 currKey = new Key(word.at(0), stoi(word.at(1)));
                 this->keys.push_back((*currKey));
                 currKey = &(this->keys.back());
@@ -91,24 +92,6 @@ void ScriptParser::parse() {
         }
     }
     scriptFile.close();
-}
-
-vector<string> ScriptParser::splitStr(string str, char delimiter) {
-    string substring;
-    size_t pos = 0, size = 0;
-    vector<string> result = vector<string>();
-    for (size_t i=0; i<str.size(); i++) {
-        if (str[i] != delimiter) {
-            if (size==0) pos = i;
-            size++;
-        } else {
-            if (size) {
-                result.push_back(str.substr(pos, size));
-                size = 0;
-            }
-        }
-    }
-    return result;
 }
 
 ostream &operator<<(ostream &os, const ScriptParser &parser) {
@@ -147,19 +130,9 @@ string ScriptParser::extractPattern(string line, string key) {
     return result;
 }
 
-vector<string> ScriptParser::splitByWhitespace(string str) {
-    string sub;
-    size_t pos = 0, end = 0;
-    vector<string> result = vector<string>();
-    while (end < str.length()) {
-        while (isspace(str[pos])) pos++; // first nonspace char
-        end = pos;
-        while (!isspace(str[end])) end++; // find next space char
-        if (end>pos) {
-            end = (end > str.length()) ? str.length() : end;
-            result.push_back(str.substr(pos, end-pos));
-        }
-        pos = end+1;
+Key* ScriptParser::findKey(string word) {
+    for (size_t i=0; i<this->keys.size(); i++) {
+        if (this->keys.at(i).name==word) return &(this->keys[i]);
     }
-    return result;
+    return nullptr;
 }
