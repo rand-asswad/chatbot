@@ -3,21 +3,22 @@
 
 #include <iostream>
 #include <vector>
+#include "../../utils/String.h"
 
 using namespace std;
 
 class Decomp {
 public: 
-    string pattern;
+    String pattern;
     size_t reassembRule;
-    vector<string> reassemb;
+    vector<String> reassemb;
 
-    Decomp(const string &pattern, bool mem);
+    Decomp(const String &pattern, bool mem);
 
 private:
     bool mem;
-    string nextRule();
-    string assemble(string s);
+    String nextRule();
+    String assemble(String s);
 };
 
 #endif //_DECOMP_H

@@ -2,46 +2,41 @@
 #include "Eliza.h"
 #include "../../utils.h"
 
-Eliza::Eliza(istream *input, ostream *output, string sourcePath) : Agent(input, output){
+Eliza::Eliza(istream *input, ostream *output, String sourcePath) : Agent(input, output){
     this->script = new ScriptParser(sourcePath);
     this->memory = Memory();
 }
 
-string Eliza::greetUser() {
+String Eliza::greetUser() {
     return this->script->initial;
 }
 
-string Eliza::processInput(string input) {
-    for (string q : this->script->quit) {
+String Eliza::processInput(String input) {
+    for (String q : this->script->quit) {
         this->quit = (input==q);
         if (quit) return this->script->final;
     }
 
-    // split sentences
-    string delimiters = ",?!";
-    string temp = replaceChars(input, delimiters, '.');
-    vector<string> sentences = split(temp, '.');
+    // split sentences into a vector
+    String delimiters = ",?!";
+    String temp = replaceChars(input, delimiters, '.');
+    vector<String> sentences = temp.split('.');
 
-    // process sentences separately
-    vector<string> outputs = vector<string>();
-    for (string s : sentences) {
-        outputs.push_back(processSentence(s));
+    // process each sentence separately
+    vector<String> output = vector<String>();
+    for (String s : sentences) {
+        output.push_back(processSentence(s));
     }
 
-    // regroup sentences
-    string output;
-    for (string out : outputs) {
-        if (!out.empty()) output += out + " ";
-    }
-    output = output.substr(0, output.length() - 1);
-    return output;
+    // return full response.
+    return join(output);
 }
 
-vector<Key> Eliza::findKeys(string input) {
+vector<Key> Eliza::collectKeys(String input) {
     vector<Key> keys = vector<Key>();
-    vector<string> words = split(input);
+    vector<String> words = input.split();
     Key* k_ptr = nullptr;
-    for (string w : words) {
+    for (String w : words) {
         k_ptr = this->script->findKey(w);
         if (k_ptr!= nullptr) keys.push_back((*k_ptr));
     }
@@ -49,14 +44,14 @@ vector<Key> Eliza::findKeys(string input) {
     return keys;
 }
 
-string Eliza::processSentence(string input) {
+String Eliza::processSentence(String input) {
     // pre-translate input
-    string output = this->script->pre_translate(input);
+    String output = this->script->pre_translate(input);
 
     // collect keywords
-    vector<Key> keys = this->findKeys(output);
+    vector<Key> keys = this->collectKeys(output);
 
-    // generate reply from keyword
+    // generate reply from keywords
 
 
     return output;

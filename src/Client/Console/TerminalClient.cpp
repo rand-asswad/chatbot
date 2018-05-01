@@ -4,6 +4,7 @@
 
 
 #include "TerminalClient.h"
+#include "../../utils/String.h"
 
 /**
  * TerminalClient implementation
@@ -22,6 +23,6 @@ int TerminalClient::Main(int argc, char* argv[]) {
 /**
  * @return String
  */
-string TerminalClient::getAgentName() {
+String TerminalClient::getAgentName() {
     return "";
 }

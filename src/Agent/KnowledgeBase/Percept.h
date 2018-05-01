@@ -11,7 +11,7 @@ public:
     int id;
    vector<Sentence> makePerceptSentence(Percept p );
 private: 
-    string string_feed;
+    String string_feed;
     vector<Sentence> logic_feed;
 };
 

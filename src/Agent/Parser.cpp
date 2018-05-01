@@ -1,7 +1,7 @@
 #include "Parser.h"
 
 
-Parser::Parser(string sourcePath) {
+Parser::Parser(String sourcePath) {
     this->sourcePath = sourcePath;
 }
 

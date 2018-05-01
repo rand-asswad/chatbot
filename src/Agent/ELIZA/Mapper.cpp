@@ -4,14 +4,14 @@
 #include "../../utils.h"
 
 
-void Mapper::map(string src, string dst) {
-    this->insert(pair<string, string>(src, dst));
+void Mapper::map(String src, String dst) {
+    this->insert(pair<String, String>(src, dst));
 }
 
-string Mapper::translate(string str) {
-    vector<string> words = split(str);
-    string output;
-    for (string w : words) {
+String Mapper::translate(String str) {
+    vector<String> words = str.split();
+    String output;
+    for (String w : words) {
         if (this->count(w)) output += (*this)[w] + " ";
         else output += w + " ";
     }

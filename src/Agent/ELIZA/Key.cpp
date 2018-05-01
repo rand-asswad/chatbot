@@ -1,10 +1,10 @@
 #include "Key.h"
 
 
-string Key::decompose(string s ) {
+String Key::decompose(String s ) {
     return "";
 }
 
-Key::Key(const string &name, int rank) : name(name), rank(rank) {
+Key::Key(const String &name, int rank) : name(name), rank(rank) {
     this->decomp = vector<Decomp>();
 }

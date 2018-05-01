@@ -3,38 +3,38 @@
 #include "ScriptParser.h"
 #include "../../utils.h"
 
-ScriptParser::ScriptParser(const string &sourcePath) : Parser(sourcePath) {
+ScriptParser::ScriptParser(const String &sourcePath) : Parser(sourcePath) {
     this->initial = this->final = "";
     this->keys = vector<Key>();
     this->pre = this->post = Mapper();
-    this->quit = vector<string>();
+    this->quit = vector<String>();
     this->thes = Thesaurus();
 
     this->parse();
 }
 
-string ScriptParser::pre_translate(string str) {
+String ScriptParser::pre_translate(String str) {
     return this->pre.translate(str);
 }
 
-string ScriptParser::post_translate(string str) {
+String ScriptParser::post_translate(String str) {
     return this->post.translate(str);
 }
 
 void ScriptParser::parse() {
     // keys
-    const string key[] = {"initial", "final", "quit", "pre", "post", "synon", "key", "decomp", "reasmb"};
+    const String key[] = {"initial", "final", "quit", "pre", "post", "synon", "key", "decomp", "reasmb"};
 
     // Parse script file
     ifstream scriptFile(this->sourcePath);
-    string line;
+    String line;
     size_t k;
 
-    vector<string> word;
+    vector<String> word;
     Key* currKey = nullptr;
     Decomp* currDecomp = nullptr;
 
-    string match;
+    String match;
     while (getline(scriptFile, line)) {
         for (k = 0; k < 9; k++) {
             match = extractPattern(line, key[k]);
@@ -52,20 +52,20 @@ void ScriptParser::parse() {
                 this->quit.push_back(match);
                 break;
             case 3: // pre
-                word = split(match);
+                word = match.split();
                 this->pre.map(word.at(0), word.at(1));
                 word.clear();
                 break;
             case 4: // post
-                word = split(match);
+                word = match.split();
                 this->post.map(word.at(0), word.at(1));
                 word.clear();
                 break;
             case 5: // synon
-                this->thes.push_back(Synonyms(split(match)));
+                this->thes.push_back(Synonyms(match.split()));
                 break;
             case 6: // key
-                word = split(match);
+                word = match.split();
                 currKey = new Key(word.at(0), stoi(word.at(1)));
                 this->keys.push_back((*currKey));
                 currKey = &(this->keys.back());
@@ -97,7 +97,7 @@ void ScriptParser::parse() {
 ostream &operator<<(ostream &os, const ScriptParser &parser) {
     os << "<initial: \"" << parser.initial << "\">" << endl;
     os << "<final: \"" << parser.final << "\">" << endl;
-    for (string q : parser.quit) os << "<quit: \"" << q << "\">" << endl;
+    for (String q : parser.quit) os << "<quit: \"" << q << "\">" << endl;
     for (auto pair : parser.pre) os << "<pre: (" << pair.first << ", " << pair.second << ")>" << endl;
     for (auto pair : parser.post) os << "<post: (" << pair.first << ", " << pair.second << ")>" << endl;
     for (auto syn : parser.thes) {
@@ -110,7 +110,7 @@ ostream &operator<<(ostream &os, const ScriptParser &parser) {
         os << ", decomps=" << key.decomp.size() << ">" << endl;
         for (Decomp dc : key.decomp) {
             os << "<decomp: key=\"" << key.name << "\", pattern=\"" << dc.pattern << "\">" << endl;
-            for (string rsb : dc.reassemb) {
+            for (String rsb : dc.reassemb) {
                 os << "<reasmb: decomp=\"" << dc.pattern << "\", pattern=\"" << rsb << "\">" << endl;
             }
         }
@@ -118,11 +118,11 @@ ostream &operator<<(ostream &os, const ScriptParser &parser) {
     return os;
 }
 
-string ScriptParser::extractPattern(string line, string key) {
-    string expression = key + ":";
-    string result;
+String ScriptParser::extractPattern(String line, String key) {
+    String expression = key + ":";
+    String result;
     size_t pos = line.find(expression);
-    if (pos!=string::npos) {
+    if (pos!=String::npos) {
         pos += expression.length();
         result = line.substr(pos, line.length());
         while (isspace(result.front())) result.erase(result.begin());
@@ -130,7 +130,7 @@ string ScriptParser::extractPattern(string line, string key) {
     return result;
 }
 
-Key* ScriptParser::findKey(string word) {
+Key* ScriptParser::findKey(String word) {
     for (size_t i=0; i<this->keys.size(); i++) {
         if (this->keys.at(i).name==word) return &(this->keys[i]);
     }

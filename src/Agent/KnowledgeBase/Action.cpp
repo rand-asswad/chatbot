@@ -4,6 +4,6 @@ vector<Sentence> Action::makeActionQuery(KB kb , int t) {
     return vector<Sentence>();
 }
 
-string Action::makeActionText(vector<Sentence> a ) {
+String Action::makeActionText(vector<Sentence> a ) {
     return "";
 }

@@ -3,16 +3,17 @@
 
 #include <iostream>
 #include <vector>
+#include "../../utils/String.h"
 
 using namespace std;
 
 
-class Synonyms: public vector<string> {
+class Synonyms: public vector<String> {
 public:
-    Synonyms(const string word);
-    Synonyms(const vector<string> &__x);
+    Synonyms(const String word);
+    Synonyms(const vector<String> &__x);
 
-    bool hasWord(string word);
+    bool hasWord(String word);
 };
 
 #endif //_SYNONYMS_H

@@ -8,7 +8,7 @@ Agent::Agent(istream* input, ostream* output) {
 }
 
 void Agent::run() {
-    string userInput;
+    String userInput;
     this->quit = false;
     *(this->outputStream) << this->greetUser() << endl;
     while (!quit) {

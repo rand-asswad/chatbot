@@ -13,25 +13,25 @@ using namespace std;
 
 class ScriptParser: public Parser {
 public: 
-    string initial;
-    string final;
+    String initial;
+    String final;
     Mapper pre;
     Mapper post;
     vector<Key> keys;
-    vector<string> quit;
+    vector<String> quit;
     Thesaurus thes;
 
-    ScriptParser(const string &sourcePath);
+    ScriptParser(const String &sourcePath);
 
-    string pre_translate(string);
-    string post_translate(string);
+    String pre_translate(String);
+    String post_translate(String);
 
     friend ostream &operator<<(ostream &os, const ScriptParser &parser);
 
-    Key* findKey(string word);
+    Key* findKey(String word);
 private:
     void parse();
-    string extractPattern(string line, string key);
+    String extractPattern(String line, String key);
 };
 
 #endif //_SCRIPTPARSER_H

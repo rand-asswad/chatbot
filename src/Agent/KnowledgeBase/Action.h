@@ -9,9 +9,9 @@ public:
     int id;
     
     static vector<Sentence> makeActionQuery(KB kb , int t);
-    string makeActionText(vector<Sentence> a );
+    String makeActionText(vector<Sentence> a );
 private: 
-    string string_feed;
+    String string_feed;
     vector<Sentence> logic_feed;
 };
 

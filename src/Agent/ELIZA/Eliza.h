@@ -15,14 +15,14 @@ public:
     ScriptParser* script;
     Memory memory;
 
-    Eliza(istream *input, ostream *output, string sourcePath);
+    Eliza(istream *input, ostream *output, String sourcePath);
 
 private:
-    string processInput(string input) override ;
-    string greetUser() override ;
+    String processInput(String input) override ;
+    String greetUser() override ;
 
-    string processSentence(string input);
-    vector<Key> findKeys(string input);
+    String processSentence(String input);
+    vector<Key> collectKeys(String input);
     void processScript();
 };
 

@@ -11,7 +11,7 @@ public:
     
     Thesaurus() = default;
     
-    Synonyms findSynonyms(string word);
+    Synonyms findSynonyms(String word);
 };
 
 #endif //_THESAURUS_H

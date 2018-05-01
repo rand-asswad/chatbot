@@ -18153,7 +18153,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "-findKeys(input: String): vector<Keys>",
+													"text": "-collectKeys(input: String): vector<Keys>",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false

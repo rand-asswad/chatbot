@@ -2,11 +2,13 @@
 #define _AGENT_H
 
 #include <iostream>
+#include "../utils/String.h"
+
 using namespace std;
 
 class Agent {
 public: 
-    string name;
+    String name;
     istream* inputStream;
     ostream* outputStream;
     bool quit;
@@ -14,9 +16,9 @@ public:
     Agent(istream* input, ostream* output);
     void run();
 protected:
-    virtual string processInput(string) = 0;
-    virtual string greetUser() = 0;
-    //virtual string bidFarewell() = 0;
+    virtual String processInput(String) = 0;
+    virtual String greetUser() = 0;
+    //virtual String bidFarewell() = 0;
 };
 
 #endif //_AGENT_H

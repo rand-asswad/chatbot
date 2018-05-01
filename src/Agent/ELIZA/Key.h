@@ -9,13 +9,13 @@ using namespace std;
 
 class Key {
 public: 
-    string name;
+    String name;
     int rank;
     vector<Decomp> decomp;
 
-    Key(const string &name, int rank);
+    Key(const String &name, int rank);
 private:
-    string decompose(string s);
+    String decompose(String s);
 };
 
 #endif //_KEY_H

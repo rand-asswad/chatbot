@@ -7,6 +7,7 @@
 #define _TERMINALCLIENT_H
 
 #include "../Client.h"
+#include "../../utils/String.h"
 #include <iostream>
 using namespace std;
 
@@ -20,7 +21,7 @@ public:
     int Main(int argc, char* argv[]);
 private: 
     
-    string getAgentName();
+    String getAgentName();
 };
 
 #endif //_TERMINALCLIENT_H

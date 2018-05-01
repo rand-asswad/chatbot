@@ -3,16 +3,17 @@
 
 #include <iostream>
 #include <map>
+#include "../../utils/String.h"
 
 using namespace std;
 
-class Mapper: public map<string, string> {
+class Mapper: public map<String, String> {
 public: 
     
     Mapper() = default;
-    void map(string src, string dst);
+    void map(String src, String dst);
     
-    string translate(string str);
+    String translate(String str);
     class AssociationClass1 {
     };
 };

@@ -3,14 +3,16 @@
 
 #include <iostream>
 #include <vector>
+#include "../../utils/String.h"
+
 using namespace std;
 
-class Memory: public vector<string> {
+class Memory: public vector<String> {
 public: 
     
     Memory() = default;
     
-    void save(string);
+    void save(String);
 private: 
     int max;
 };

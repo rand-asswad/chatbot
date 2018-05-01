@@ -2,7 +2,7 @@
 #include "Decomp.h"
 
 
-string Decomp::nextRule() {
+String Decomp::nextRule() {
     default_random_engine gen_rand;
     uniform_int_distribution<size_t> distribution(0, this->reassemb.size());
     if (this->mem) {
@@ -15,10 +15,10 @@ string Decomp::nextRule() {
     return this->reassemb.at(this->reassembRule);
 }
 
-string Decomp::assemble(string s ) {
+String Decomp::assemble(String s ) {
     return "";
 }
 
-Decomp::Decomp(const string &pattern, bool mem) : pattern(pattern), mem(mem) {
-    this->reassemb = vector<string>();
+Decomp::Decomp(const String &pattern, bool mem) : pattern(pattern), mem(mem) {
+    this->reassemb = vector<String>();
 }
