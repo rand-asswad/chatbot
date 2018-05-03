@@ -33,15 +33,19 @@ String Eliza::processInput(String input) {
     return join(output);
 }
 
-vector<Key> Eliza::collectKeys(String input) {
-    vector<Key> keys = vector<Key>();
+vector<Key*> Eliza::collectKeys(String input) {
+    vector<Key*> keys = vector<Key*>();
     vector<String> words = input.split();
     Key* k_ptr = nullptr;
+    vector<Key*>::iterator it;
     for (String w : words) {
         k_ptr = this->script->findKey(w);
-        if (k_ptr!= nullptr) keys.push_back((*k_ptr));
+        if (k_ptr!= nullptr) {
+            it = keys.begin();
+            while ((it != keys.end()) && ((*it)->rank > k_ptr->rank)) it++;
+            keys.insert(it, k_ptr);
+        }
     }
-    reverse(keys.begin(), keys.end());
     return keys;
 }
 
@@ -50,7 +54,7 @@ String Eliza::processSentence(String input) {
     String output = this->script->pre_translate(input);
 
     // collect keywords
-    vector<Key> keys = this->collectKeys(output);
+    vector<Key*> keys = this->collectKeys(output);
 
     // generate reply from keywords
 

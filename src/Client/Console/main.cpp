@@ -18,7 +18,7 @@ int main() {
     if (bot==1) {
         srcPath += "ELIZA/scripts/original";
         Eliza agent = Eliza(inputStream, outputStream, srcPath);
-        cout << *(agent.script) << endl;
+        //cout << *(agent.script) << endl;
 
         //agent.run();
 

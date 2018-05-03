@@ -16,13 +16,11 @@ public:
     Memory memory;
 
     Eliza(istream *input, ostream *output, String sourcePath);
-
 private:
     String processInput(String input) override ;
     String greetUser() override ;
-
+    vector<Key*> collectKeys(String input);
     String processSentence(String input);
-    vector<Key> collectKeys(String input);
     void processScript();
 };
 
