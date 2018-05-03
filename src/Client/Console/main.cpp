@@ -19,37 +19,16 @@ int main() {
         srcPath += "ELIZA/scripts/original";
         Eliza agent = Eliza(inputStream, outputStream, srcPath);
         cout << *(agent.script) << endl;
+
         //agent.run();
+
     } else {
         //KBAgent agent = KBAgent(kb);
     }
 
     // Run Chatbot
     //agent.run();
-/*
-    String decomp = "* i remember *";
-    vector<String> words = split(decomp);
-    String pattern = "";
 
-    for (size_t i=0; i<words.size(); i++) {
-        if (words[i]=="*") {
-            if (i+1==words.size()) pattern += R"((.*))";
-            else if (i>0) pattern += R"(((?:\s(?:\S+\s)*?)+?))";
-            else pattern += R"((\S+ )*?)";
-        } else {
-            pattern += words[i];
-            if ((i<words.size()-1)&&(words[i+1]!="*")) pattern += R"( )";
-        }
-    }
-
-    String input = "yes i remember him";
-    regex expr(pattern);
-
-    for (String w:words) cout << w << "-";
-    cout << endl;
-    cout << pattern << endl;
-    cout << regex_match(input, expr) << endl;
-    */
 
     return EXIT_SUCCESS;
 }

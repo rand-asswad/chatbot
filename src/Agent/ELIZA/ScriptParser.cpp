@@ -5,7 +5,7 @@
 
 ScriptParser::ScriptParser(const String &sourcePath) : Parser(sourcePath) {
     this->initial = this->final = "";
-    this->keys = vector<Key>();
+    this->keys = vector<Key*>();
     this->pre = this->post = Mapper();
     this->quit = vector<String>();
     this->thes = Thesaurus();
@@ -33,7 +33,7 @@ void ScriptParser::parse() {
     vector<String> word;
     Key* currKey = nullptr;
     Decomp* currDecomp = nullptr;
-
+    String pattern;
     String match;
     while (getline(scriptFile, line)) {
         for (k = 0; k < 9; k++) {
@@ -65,28 +65,16 @@ void ScriptParser::parse() {
                 this->thes.push_back(Synonyms(match.split()));
                 break;
             case 6: // key
-                word = match.split();
-                currKey = new Key(word.at(0), stoi(word.at(1)));
-                this->keys.push_back((*currKey));
-                currKey = &(this->keys.back());
+                currKey = this->newKey(match);
+                //cout << *currKey << endl;
                 break;
             case 7: // decomp
-                currDecomp = new Decomp(match, false);
-                if (currKey== nullptr) {
-                    // raise error
-                    cout << "ERROR: No associated key for decomposition" << endl;
-                } else {
-                    currKey->decomp.push_back((*currDecomp));
-                    currDecomp = &(currKey->decomp.back());
-                }
+                currDecomp = currKey->newDecomp(match, thes);
+                //cout << "\t" << *currDecomp << endl;
                 break;
             case 8: // reasmb
-                if (currDecomp== nullptr) {
-                    // raise error
-                    cout << "ERROR: No associated decomposition for reassemble rule" << endl;
-                } else {
-                    currDecomp->reassemb.push_back(match);
-                }
+                currDecomp->newReasmb(match);
+                //cout << "\t\t" << currDecomp->reassemb.back() << endl;
                 break;
             default: break;
         }
@@ -105,14 +93,11 @@ ostream &operator<<(ostream &os, const ScriptParser &parser) {
         for (size_t i=0; i<syn.size()-1; i++) os << syn[i] << ", ";
         os << syn.back() << ")>" << endl;
     }
-    for (Key key : parser.keys) {
-        os << "<key: name=\"" << key.name << "\", rank=" << key.rank;
-        os << ", decomps=" << key.decomp.size() << ">" << endl;
-        for (Decomp dc : key.decomp) {
-            os << "<decomp: key=\"" << key.name << "\", pattern=\"" << dc.pattern << "\">" << endl;
-            for (String rsb : dc.reassemb) {
-                os << "<reasmb: decomp=\"" << dc.pattern << "\", pattern=\"" << rsb << "\">" << endl;
-            }
+    for (auto &key : parser.keys) {
+        os << *key << endl;
+        for (auto &dc : key->decomp) {
+            os << "\t" << *dc << endl;
+            for (auto &rsb : dc->reassemb) os << "\t\t" << *rsb << endl;
         }
     }
     return os;
@@ -131,8 +116,15 @@ String ScriptParser::extractPattern(String line, String key) {
 }
 
 Key* ScriptParser::findKey(String word) {
-    for (size_t i=0; i<this->keys.size(); i++) {
-        if (this->keys.at(i).name==word) return &(this->keys[i]);
+    for (auto &key : this->keys) {
+        if (key->name==word) return key;
     }
     return nullptr;
+}
+
+Key* ScriptParser::newKey(String scriptLine) {
+    vector<String> words = scriptLine.split();
+    auto key = new Key(words.at(0), int(words.at(1)));
+    this->keys.push_back(key);
+    return key;
 }

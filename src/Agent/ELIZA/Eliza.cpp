@@ -12,6 +12,7 @@ String Eliza::greetUser() {
 }
 
 String Eliza::processInput(String input) {
+    input.lower();
     for (String q : this->script->quit) {
         this->quit = (input==q);
         if (quit) return this->script->final;

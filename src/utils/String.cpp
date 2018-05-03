@@ -39,12 +39,24 @@ vector<String> String::split(char delimiter) {
     return words;
 }
 
+void String::lower() {
+    for (size_t i=0; i<this->length(); i++)
+        if ((this->at(i)>='A')&&(this->at(i)<='Z'))
+            this->at(i) -= ('A' - 'a');
+}
 
-String join(vector<String> words, char delimiter) {
-    String joined;
-    for (String w: words) {
-        joined += w;
-        joined.append(1, delimiter);
+void String::replaceStr(const String &src, const String &dst) {
+    size_t pos = this->find(src);
+    while (pos != npos) {
+        this->replace(pos, src.length(), dst);
+        pos += dst.length();
+        pos = this->find(src, pos);
     }
-    return joined.substr(0, joined.length() - 1);
+}
+
+
+String join(vector<String> words, String delimiter) {
+    String joined;
+    for (String w: words) joined += w + delimiter;
+    return joined.substr(0, joined.length() - delimiter.length());
 }

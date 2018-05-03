@@ -11,13 +11,15 @@
 
 using namespace std;
 
+class Key;
+
 class ScriptParser: public Parser {
 public: 
     String initial;
     String final;
     Mapper pre;
     Mapper post;
-    vector<Key> keys;
+    vector<Key*> keys;
     vector<String> quit;
     Thesaurus thes;
 
@@ -32,6 +34,8 @@ public:
 private:
     void parse();
     String extractPattern(String line, String key);
+
+    Key* newKey(String scriptLine);
 };
 
 #endif //_SCRIPTPARSER_H

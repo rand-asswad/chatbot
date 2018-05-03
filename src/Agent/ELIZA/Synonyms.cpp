@@ -11,3 +11,7 @@ Synonyms::Synonyms(const String word) : vector<String>(){
     this->push_back(word);
 }
 
+String Synonyms::asRegex() {
+    return "(" + join(*this, "|") + ")";
+}
+

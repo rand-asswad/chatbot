@@ -13,6 +13,8 @@ public:
     Synonyms(const String word);
     Synonyms(const vector<String> &__x);
 
+    String asRegex();
+
     bool hasWord(String word);
 };
 

@@ -17,8 +17,11 @@ public:
     // pythonic methods
     vector<String> split();
     vector<String> split(char);
+
+    void lower();
+    void replaceStr(const String &src, const String &dst);
 };
 
-String join(vector<String> words, char delimiter = ' ');
+String join(vector<String> words, String delimiter = " ");
 
 #endif //CHATBOT_STRING_H
