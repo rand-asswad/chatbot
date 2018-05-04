@@ -17,11 +17,9 @@ public:
 
     Key(const String &name, int rank);
     Decomp* newDecomp(String scriptLine, Thesaurus thesaurus);
+    Decomp* findDecomp(String str);
 
     friend ostream &operator<<(ostream &os, const Key &key);
-
-private:
-    String decompose(String s);
 };
 
 #endif //_KEY_H

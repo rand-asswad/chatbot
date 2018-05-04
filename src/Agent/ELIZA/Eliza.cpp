@@ -17,7 +17,7 @@ String Eliza::processInput(String input) {
         this->quit = (input==q);
         if (quit) return this->script->final;
     }
-
+/*
     // split sentences into a vector
     String delimiters = ",?!";
     String temp = replaceChars(input, delimiters, '.');
@@ -30,7 +30,8 @@ String Eliza::processInput(String input) {
     }
 
     // return full response.
-    return join(output);
+    return join(output);*/
+    return processSentence(input);
 }
 
 vector<Key*> Eliza::collectKeys(String input) {
@@ -39,7 +40,7 @@ vector<Key*> Eliza::collectKeys(String input) {
     Key* k_ptr = nullptr;
     vector<Key*>::iterator it;
     for (String w : words) {
-        k_ptr = this->script->findKey(w);
+        k_ptr = this->script->getKey(w);
         if (k_ptr!= nullptr) {
             it = keys.begin();
             while ((it != keys.end()) && ((*it)->rank > k_ptr->rank)) it++;
@@ -50,18 +51,73 @@ vector<Key*> Eliza::collectKeys(String input) {
 }
 
 String Eliza::processSentence(String input) {
+    cout << "***processing \"" << input << "\"***" << endl;
+
     // pre-translate input
-    String output = this->script->pre_translate(input);
+    cout << "***pretranslating***" << endl;
+    String str = this->script->pre_translate(input);
+    cout << "***processing \"" << str << "\"***" << endl;
 
     // collect keywords
-    vector<Key*> keys = this->collectKeys(output);
+    vector<Key*> keys = this->collectKeys(str);
+    cout << "***collected keywords (in ranked order):***" << endl;
+    for (auto &key : keys) cout << "\t" << *key << "\n";
 
-    // generate reply from keywords
+    // find decomposition rule for keywords
+    Decomp* decomp;
+    String output;
+    for (auto &key : keys) {
+        decomp = key->findDecomp(str);
+        if (decomp!=nullptr) {
+            cout << "\t" << *decomp << endl;
+            output = this->decomposeOnKey(decomp, str);
+            if (!output.empty()) return output;
+        }
+    }
 
+    cout << "***decomposition/reassembly failed***" << endl;
+    // no output
+    auto reasmb = memory.pop();
+    cout << "***memory poped***\n\t" << *reasmb << endl;
+    if (bool(reasmb)) {
+        cout << "***trying replies from memory***" << endl;
+        cout << "\t" << *reasmb << endl;
+        decomp = reasmb->decomp;
+        output = this->decomposeOnKey(decomp, str);
+        if (!output.empty()) return output;
+    }
 
-    return output;
+    cout << "***nothing in memory, try key \"xnone\"***" << endl;
+
+    // no memory
+    decomp = this->script->getKey("xnone")->findDecomp(str);
+    return this->decomposeOnKey(decomp, str);
 }
 
-void Eliza::processScript() {
+String Eliza::decomposeOnKey(Decomp *decomp, String input) {
+    // decompose sentence
+    cout << "***decomposing on keyword \"" << decomp->key->name
+         << "\" on decomposition rule \"" << decomp->pattern << "\"***" << endl;
+    auto matches = decomp->decompose(input);
 
+    cout << "***decomposition matches:" << endl;
+    for (auto &m : matches) cout << "\t\"" << m << "\"" << endl;
+
+    // get assembly rule
+    auto reasmb = decomp->nextRule();
+    cout << "***reassembling on rule \"" << reasmb->rule << "\"***" << endl;
+
+    // goto another reassembly rule
+    auto words = reasmb->rule.split();
+    if (words.at(0)=="goto") {
+        decomp = this->script->getKey(words.at(1))->findDecomp(input);
+        matches = decomp->decompose(input);
+        reasmb = decomp->nextRule();
+        cout << "***redirecting to keyword \"" << decomp->key->name << "\"***" << endl;
+    }
+
+    // save in memory
+    if (decomp->mem) memory.save(reasmb);
+
+    return reasmb->reassemble(matches);
 }

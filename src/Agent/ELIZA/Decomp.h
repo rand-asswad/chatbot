@@ -16,19 +16,19 @@ class Reasmb;
 class Decomp {
 public: 
     String pattern;
-    size_t reassembRule;
     vector<Reasmb*> reassemb;
     Key* key;
 
     Decomp(Key* key, String scriptLine, Thesaurus thes);
     void newReasmb(String reasmb);
+    vector<String> decompose(String str);
 
     friend ostream &operator<<(ostream &os, const Decomp &decomp);
 
-private:
-    bool mem;
     Reasmb* nextRule();
-    String assemble(String s);
+    bool mem;
+private:
+    size_t reassembRule = -1;
 };
 
 #endif //_DECOMP_H

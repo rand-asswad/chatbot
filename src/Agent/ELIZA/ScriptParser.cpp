@@ -1,7 +1,6 @@
 #include <fstream>
 #include <regex>
 #include "ScriptParser.h"
-#include "../../utils.h"
 
 ScriptParser::ScriptParser(const String &sourcePath) : Parser(sourcePath) {
     this->initial = this->final = "";
@@ -62,7 +61,7 @@ void ScriptParser::parse() {
                 word.clear();
                 break;
             case 5: // synon
-                this->thes.push_back(Synonyms(match.split()));
+                this->thes.push_back(new Synonyms(match.split()));
                 break;
             case 6: // key
                 currKey = this->newKey(match);
@@ -88,11 +87,7 @@ ostream &operator<<(ostream &os, const ScriptParser &parser) {
     for (String q : parser.quit) os << "<quit: \"" << q << "\">" << endl;
     for (auto pair : parser.pre) os << "<pre: (" << pair.first << ", " << pair.second << ")>" << endl;
     for (auto pair : parser.post) os << "<post: (" << pair.first << ", " << pair.second << ")>" << endl;
-    for (auto syn : parser.thes) {
-        os << "<synon: (";
-        for (size_t i=0; i<syn.size()-1; i++) os << syn[i] << ", ";
-        os << syn.back() << ")>" << endl;
-    }
+    os << parser.thes;
     for (auto &key : parser.keys) {
         os << *key << endl;
         for (auto &dc : key->decomp) {
@@ -115,7 +110,7 @@ String ScriptParser::extractPattern(String line, String key) {
     return result;
 }
 
-Key* ScriptParser::findKey(String word) {
+Key* ScriptParser::getKey(String word) {
     for (auto &key : this->keys) {
         if (key->name==word) return key;
     }

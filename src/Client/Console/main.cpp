@@ -20,7 +20,18 @@ int main() {
         Eliza agent = Eliza(inputStream, outputStream, srcPath);
         //cout << *(agent.script) << endl;
 
-        //agent.run();
+        auto key = new Key("my", 2);
+        auto decomp = new Decomp(key, "* my* @family *", agent.script->thes);
+        auto reasmb = new Reasmb(decomp, "Tell me more about your (3).");
+        auto syn = agent.script->thes.findSynonyms("family");
+
+
+        String input = "I love my whole family very much";
+        auto matches = decomp->decompose(input);
+        String output = reasmb->reassemble(matches);
+        //cout << output << endl;
+
+        agent.run();
 
     } else {
         //KBAgent agent = KBAgent(kb);

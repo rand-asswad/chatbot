@@ -8,12 +8,13 @@
 
 class Decomp;
 
-class Reasmb : public String{
+class Reasmb {
 public:
     Decomp* decomp;
     String rule;
 
     Reasmb(Decomp *decomp, const String &rule);
+    String reassemble(vector<String> matches);
 
     friend ostream &operator<<(ostream &os, const Reasmb &reasmb);
 };

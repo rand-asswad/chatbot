@@ -6,12 +6,14 @@
 #include <iostream>
 using namespace std;
 
-class Thesaurus : public vector<Synonyms> {
+class Thesaurus : public vector<Synonyms*> {
 public: 
     
     Thesaurus() = default;
     
-    Synonyms findSynonyms(String word);
+    Synonyms* findSynonyms(String word);
+
+    friend ostream &operator<<(ostream &os, const Thesaurus &thesaurus);
 };
 
 #endif //_THESAURUS_H

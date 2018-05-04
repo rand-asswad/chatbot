@@ -2,19 +2,19 @@
 #define _MEMORY_H
 
 #include <iostream>
-#include <vector>
-#include "../../utils/String.h"
+#include "Reasmb.h"
 
 using namespace std;
 
-class Memory: public vector<String> {
+class Memory: vector<Reasmb*> {
 public: 
     
     Memory() = default;
     
-    void save(String);
+    void save(Reasmb*);
+    Reasmb* pop();
 private: 
-    int max;
+    size_t max = 20; //default
 };
 
 #endif //_MEMORY_H

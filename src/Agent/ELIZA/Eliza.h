@@ -21,7 +21,7 @@ private:
     String greetUser() override ;
     vector<Key*> collectKeys(String input);
     String processSentence(String input);
-    void processScript();
+    String decomposeOnKey(Decomp *decomp, String input);
 };
 
 #endif //_ELIZA_H

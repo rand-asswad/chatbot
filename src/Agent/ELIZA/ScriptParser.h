@@ -30,7 +30,7 @@ public:
 
     friend ostream &operator<<(ostream &os, const ScriptParser &parser);
 
-    Key* findKey(String word);
+    Key* getKey(String word);
 private:
     void parse();
     String extractPattern(String line, String key);

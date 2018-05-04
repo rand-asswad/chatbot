@@ -1,8 +1,5 @@
+#include <regex>
 #include "Key.h"
-
-String Key::decompose(String s ) {
-    return "";
-}
 
 Key::Key(const String &name, int rank) : name(name), rank(rank) {
     this->decomp = vector<Decomp*>();
@@ -18,4 +15,17 @@ Decomp* Key::newDecomp(String scriptLine, Thesaurus thesaurus) {
     Decomp* newdecomp = new Decomp(this, move(scriptLine), move(thesaurus));
     this->decomp.push_back(newdecomp);
     return newdecomp;
+}
+
+Decomp* Key::findDecomp(String str) {
+    regex expr;
+    for (auto &dp : decomp) {
+        expr.assign(dp->pattern);
+        if (regex_match(str, expr)) {
+            cout << "***string matched decomp \"" << dp->pattern << "\"\n";
+            return dp;
+        }
+    }
+    cout << "***no decomp for key:\"" << this->name << "\"" << endl;
+    return nullptr;
 }

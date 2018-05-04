@@ -16,6 +16,8 @@ public:
     String asRegex();
 
     bool hasWord(String word);
+
+    friend ostream &operator<<(ostream &os, const Synonyms &synonyms);
 };
 
 #endif //_SYNONYMS_H
