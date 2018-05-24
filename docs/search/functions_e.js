@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['tell',['tell',['../classKB.html#ab0b72bc95f5f3cd72ec0d01a10310b9f',1,'KB']]],
-  ['train',['train',['../classKB.html#abbd192b58b489d5123d844b11e1b6355',1,'KB']]]
+  ['reassemble',['reassemble',['../classReasmb.html#abba1a0d8940231ac3e9ce7fd39173eb4',1,'Reasmb']]],
+  ['replacestr',['replaceStr',['../classString.html#aca0926e526b84e04a2141cd6aa694d6f',1,'String']]],
+  ['run',['run',['../classAgent.html#a5e176f9a9b2a9269506cc172c1e2b897',1,'Agent']]]
 ];

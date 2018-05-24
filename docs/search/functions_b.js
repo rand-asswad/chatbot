@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['parse',['parse',['../classAnalyser.html#ad44df7523051fa8e152e1f623d00aa9a',1,'Analyser']]],
-  ['processinput',['processInput',['../classAgent.html#a8908483f8d1302ec8dd65539369de9bb',1,'Agent::processInput()'],['../classEliza.html#a9700906fb44016db11cd1183d5a1f1f3',1,'Eliza::processInput()']]],
-  ['processsentence',['processSentence',['../classEliza.html#a388dad084acdf7310dc1028bdee044f2',1,'Eliza']]]
+  ['main',['Main',['../classTerminalClient.html#a278c0a304d0d9496530d3094589389f4',1,'TerminalClient::Main()'],['../classGUIclient.html#aa78d5fe6aabaa8777bf79c60ba6ec301',1,'GUIclient::Main()']]],
+  ['makeactionquery',['makeActionQuery',['../classAction.html#ab7c26e0f05deddc0a8bf9c3cfd1da11c',1,'Action']]],
+  ['makeactiontext',['makeActionText',['../classAction.html#a6fc4f01bddc1431da13be9c4d93beece',1,'Action']]],
+  ['makeperceptsentence',['makePerceptSentence',['../classPercept.html#a3912d5efafea356d07436b791a97684c',1,'Percept']]],
+  ['map',['map',['../classMapper.html#aec2d64e739da82af037709cb63d52064',1,'Mapper']]]
 ];
