@@ -5,5 +5,5 @@ var searchData=
   ['makeactiontext',['makeActionText',['../classAction.html#a6fc4f01bddc1431da13be9c4d93beece',1,'Action']]],
   ['makeperceptsentence',['makePerceptSentence',['../classPercept.html#a3912d5efafea356d07436b791a97684c',1,'Percept']]],
   ['mapper',['Mapper',['../classMapper.html',1,'']]],
-  ['memory',['Memory',['../classMemory.html',1,'']]]
+  ['memory',['Memory',['../classMemory.html',1,'Memory'],['../classEliza.html#a2414a3a9a6e096752a27ae5140068c17',1,'Eliza::memory()']]]
 ];
