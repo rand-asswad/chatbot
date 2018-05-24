@@ -64,6 +64,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classEliza-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Eliza Class Reference</div>  </div>
@@ -116,6 +117,22 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ac6d993fd4391bbd272be8bcdaeab350c inherit pub_attribs_classAgent"><td class="mdescLeft">&#160;</td><td class="mdescRight">boolean to quit conversation <br /></td></tr>
 <tr class="separator:ac6d993fd4391bbd272be8bcdaeab350c inherit pub_attribs_classAgent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a9700906fb44016db11cd1183d5a1f1f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classString.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEliza.html#a9700906fb44016db11cd1183d5a1f1f3">processInput</a> (<a class="el" href="classString.html">String</a> input) override</td></tr>
+<tr class="separator:a9700906fb44016db11cd1183d5a1f1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87224cd89d0e0dafbc2e8883d1a83f14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classString.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEliza.html#a87224cd89d0e0dafbc2e8883d1a83f14">greetUser</a> () override</td></tr>
+<tr class="separator:a87224cd89d0e0dafbc2e8883d1a83f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb573920365f86efd4974fa1af6e4f47"><td class="memItemLeft" align="right" valign="top"><a id="adb573920365f86efd4974fa1af6e4f47"></a>
+vector&lt; <a class="el" href="classKey.html">Key</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>collectKeys</b> (<a class="el" href="classString.html">String</a> input)</td></tr>
+<tr class="separator:adb573920365f86efd4974fa1af6e4f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388dad084acdf7310dc1028bdee044f2"><td class="memItemLeft" align="right" valign="top"><a id="a388dad084acdf7310dc1028bdee044f2"></a>
+<a class="el" href="classString.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>processSentence</b> (<a class="el" href="classString.html">String</a> input)</td></tr>
+<tr class="separator:a388dad084acdf7310dc1028bdee044f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74fbfaf3553aa9224ba10ef0881d6f14"><td class="memItemLeft" align="right" valign="top"><a id="a74fbfaf3553aa9224ba10ef0881d6f14"></a>
+<a class="el" href="classString.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>decomposeOnKey</b> (<a class="el" href="classDecomp.html">Decomp</a> *decomp, <a class="el" href="classString.html">String</a> input)</td></tr>
+<tr class="separator:a74fbfaf3553aa9224ba10ef0881d6f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classAgent"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classAgent')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classAgent.html">Agent</a></td></tr>
@@ -125,6 +142,70 @@ ostream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 Can be used to point to a file stream to write a log file. <br /></td></tr>
 <tr class="separator:a5536c1d6d3beb2d9ccee127d33ceaf2e inherit pro_attribs_classAgent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a87224cd89d0e0dafbc2e8883d1a83f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87224cd89d0e0dafbc2e8883d1a83f14">&#9670;&nbsp;</a></span>greetUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classString.html">String</a> Eliza::greetUser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Generates greeting at the beginning of the conversation. </p><dl class="section return"><dt>Returns</dt><dd>output string. </dd></dl>
+
+<p>Implements <a class="el" href="classAgent.html#a753289e615d0fbe962453695e41bd0b6">Agent</a>.</p>
+
+</div>
+</div>
+<a id="a9700906fb44016db11cd1183d5a1f1f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9700906fb44016db11cd1183d5a1f1f3">&#9670;&nbsp;</a></span>processInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classString.html">String</a> Eliza::processInput </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classString.html">String</a>&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Processes input string and generates response. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>User input </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Processed output </dd></dl>
+
+<p>Implements <a class="el" href="classAgent.html#a8908483f8d1302ec8dd65539369de9bb">Agent</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Agent/ELIZA/<a class="el" href="Eliza_8h_source.html">Eliza.h</a></li>
 <li>src/Agent/ELIZA/Eliza.cpp</li>
