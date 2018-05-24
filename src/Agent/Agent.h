@@ -8,45 +8,49 @@ using namespace std;
 
 
 /**
- * Abstract class: Agent that processes input speech and generates output.
+ * @brief Processes input speech and generates output.
  */
 class Agent {
 public:
 
-    String name;            /// Agent name
-    istream* inputStream;   /// pointer to input stream
-    ostream* outputStream;  /// pointer to output stream
-    bool quit;              /// boolean to quit conversation
+    /// Agent name
+    String name;
+
+    /// pointer to input stream
+    istream* inputStream;
+    /// pointer to output stream
+    ostream* outputStream;
+    /// boolean to quit conversation
+    bool quit;
 
     /**
      * Agent constructor that initializes I/O streams
-     * @param [input] pointer: to input stream
-     * @param [output] pointer: to output stream
+     * @param input Pointer to input stream
+     * @param output Pointer to output stream
      */
     Agent(istream* input, ostream* output);
 
     /**
-     * Runs agent until @quit is true.
-     * @param [debug] boolean: if true displays running processes.
+     * Runs agent until Agent.quit is true.
+     * @param debug if true, displays running processes.
      */
     void run(bool debug = false);
 protected:
     /**
-     * pointer: to output stream for displaying debug information.
-     * Can point into a file stream to write @log file.
+     * @brief Pointer to output stream for displaying debug information.\n
+     * Can be used to point to a file stream to write a log file.
      */
     ostream* debugger;
 
     /**
      * Processes input string and generates response.
-     * Virtual @fn to be implemented in inherited classes.
-     * @return output string.
+     * @param input User input
+     * @return Processed output
      */
-    virtual String processInput(String) = 0;
+    virtual String processInput(String input) = 0;
 
     /**
      * Generates greeting at the beginning of the conversation.
-     * Virtual @fn to be implemented in inherited classes.
      * @return output string.
      */
     virtual String greetUser() = 0;
