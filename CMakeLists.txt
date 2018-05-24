@@ -30,4 +30,9 @@ add_executable(chatbot
         src/Client/GUI/GUIclient.h
         src/Client/Web/WebClient.cpp
         src/Client/Web/WebClient.h
-        src/Client/Client.h src/Client/Console/main.cpp src/chatbot.h src/ns_test.cpp src/utils/String.cpp src/utils/String.h src/Agent/ELIZA/Reasmb.cpp src/Agent/ELIZA/Reasmb.h src/Agent/ELIZA/Reasmb.cpp src/Agent/ELIZA/Reasmb.h)
+        src/Client/Client.h
+        src/utils/String.cpp
+        src/utils/String.h
+        src/Agent/ELIZA/Reasmb.cpp
+        src/Agent/ELIZA/Reasmb.h
+)

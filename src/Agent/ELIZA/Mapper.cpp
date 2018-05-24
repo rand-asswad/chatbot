@@ -1,8 +1,5 @@
 #include <vector>
 #include "Mapper.h"
-#include "Script.h"
-#include "../../utils.h"
-
 
 void Mapper::map(String src, String dst) {
     this->insert(pair<String, String>(src, dst));

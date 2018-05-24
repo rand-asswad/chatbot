@@ -1,6 +1,5 @@
 #include <algorithm>
 #include "Eliza.h"
-#include "../../utils.h"
 
 Eliza::Eliza(istream *input, ostream *output, String sourcePath) : Agent(input, output){
     this->script = new Script(sourcePath);
@@ -105,7 +104,7 @@ String Eliza::processSentence(String input) {
 
     // no memory
     decomp = this->script->getKey("xnone")->findDecomp(str);
-    return this->decomposeOnKey(decomp, str);
+    return this->script->post_translate(this->decomposeOnKey(decomp, str));
 }
 
 

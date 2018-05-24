@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="chatbot"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chatbot">
+				<Option output="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/chatbot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 chatbot"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chatbot/fast">
+				<Option output="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/chatbot" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.0/../../../../include/c++/8.1.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.1.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 chatbot/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/Agent.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/Agent.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Decomp.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Decomp.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Eliza.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Eliza.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Key.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Key.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Mapper.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Mapper.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Memory.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Memory.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Reasmb.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Reasmb.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Script.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Script.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Synonyms.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Synonyms.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Thesaurus.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Thesaurus.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/Parser.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/Parser.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/Client.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/Console/TerminalClient.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/Console/TerminalClient.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/GUI/GUIclient.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/GUI/GUIclient.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/Web/WebClient.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/Web/WebClient.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/utils/String.cpp">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/utils/String.h">
+			<Option target="chatbot"/>
+		</Unit>
+		<Unit filename="/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
