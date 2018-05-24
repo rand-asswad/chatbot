@@ -14,8 +14,8 @@ add_executable(chatbot
         src/Agent/ELIZA/Mapper.h
         src/Agent/ELIZA/Memory.cpp
         src/Agent/ELIZA/Memory.h
-        src/Agent/ELIZA/ScriptParser.cpp
-        src/Agent/ELIZA/ScriptParser.h
+        src/Agent/ELIZA/Script.cpp
+        src/Agent/ELIZA/Script.h
         src/Agent/ELIZA/Synonyms.cpp
         src/Agent/ELIZA/Synonyms.h
         src/Agent/ELIZA/Thesaurus.cpp

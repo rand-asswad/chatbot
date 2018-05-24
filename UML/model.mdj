@@ -1363,7 +1363,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFi2KsR4R9kBgU="
 									},
-									"name": "ScriptParser",
+									"name": "Script",
 									"ownedElements": [
 										{
 											"_type": "UMLGeneralization",
@@ -3893,7 +3893,7 @@
 															"height": 13,
 															"autoResize": false,
 															"underline": false,
-															"text": "ScriptParser",
+															"text": "Script",
 															"horizontalAlignment": 2,
 															"verticalAlignment": 5,
 															"wordWrap": false
@@ -6888,7 +6888,7 @@
 															"height": 13,
 															"autoResize": false,
 															"underline": false,
-															"text": "+script: ScriptParser",
+															"text": "+script: Script",
 															"horizontalAlignment": 0,
 															"verticalAlignment": 5,
 															"wordWrap": false
@@ -11231,7 +11231,7 @@
 																			"height": 13,
 																			"autoResize": false,
 																			"underline": false,
-																			"text": "script: ScriptParser",
+																			"text": "script: Script",
 																			"horizontalAlignment": 2,
 																			"verticalAlignment": 5,
 																			"wordWrap": false
@@ -18011,7 +18011,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "+script: ScriptParser",
+													"text": "+script: Script",
 													"horizontalAlignment": 0,
 													"verticalAlignment": 5,
 													"wordWrap": false
@@ -18502,7 +18502,7 @@
 													"height": 13,
 													"autoResize": false,
 													"underline": false,
-													"text": "ScriptParser",
+													"text": "Script",
 													"horizontalAlignment": 2,
 													"verticalAlignment": 5,
 													"wordWrap": false

@@ -3,8 +3,9 @@
 #include "../../utils.h"
 
 Eliza::Eliza(istream *input, ostream *output, String sourcePath) : Agent(input, output){
-    this->script = new ScriptParser(sourcePath);
+    this->script = new Script(sourcePath);
     this->memory = Memory();
+    this->name = "Eliza";
 }
 
 String Eliza::greetUser() {
@@ -34,6 +35,12 @@ String Eliza::processInput(String input) {
     return processSentence(input);
 }
 
+
+/**
+ * Collects keywords from user input.
+ * @param input user input
+ * @return keywords (sorted in descending order according to Key::rank)
+ */
 vector<Key*> Eliza::collectKeys(String input) {
     vector<Key*> keys = vector<Key*>();
     vector<String> words = input.split();
@@ -50,6 +57,12 @@ vector<Key*> Eliza::collectKeys(String input) {
     return keys;
 }
 
+
+/**
+ * Process individual sentences from input.
+ * @param input broken user sentence
+ * @return processed answer
+ */
 String Eliza::processSentence(String input) {
     *debugger << "***processing \"" << input << "\"***" << endl;
 
@@ -95,6 +108,16 @@ String Eliza::processSentence(String input) {
     return this->decomposeOnKey(decomp, str);
 }
 
+
+/**
+ * Decomposes input string on given decomposition rule. Calls:
+ * - vector<String> decomp::decompose(String input)
+ * - Reasmb* decomp::nextRule()
+ * - String reasmb::reassemble(vector<String> matches)
+ * @param decomp pointer to decomposition rule
+ * @param input input string
+ * @return reassembled string
+ */
 String Eliza::decomposeOnKey(Decomp *decomp, String input) {
     // decompose sentence
     *debugger << "***decomposing on keyword \"" << decomp->key->name
