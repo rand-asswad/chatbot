@@ -167,6 +167,8 @@ iostream
 /home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/Client.h
 
 /home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/Console/TerminalClient.cpp
+fstream
+-
 TerminalClient.h
 /home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/Console/TerminalClient.h
 

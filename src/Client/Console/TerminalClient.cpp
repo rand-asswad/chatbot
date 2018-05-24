@@ -1,3 +1,4 @@
+#include <fstream>
 #include "TerminalClient.h"
 
 int main(int argc, char* argv[]) {
@@ -23,8 +24,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Run Chatbot, run(true) for debugging
-    agent->run(true);
-
+    agent->run(false);
 
     return EXIT_SUCCESS;
 }

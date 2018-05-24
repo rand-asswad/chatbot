@@ -15,7 +15,7 @@ void Agent::run(bool debug) {
     *(this->outputStream) << this->greetUser() << endl;
     while (!quit) {
         *(this->outputStream) << "> ";
-        getline(*(this->inputStream), userInput);
+        *(this->inputStream) >> userInput;
         *(this->outputStream) << this->processInput(userInput) << endl;
     }
 }
