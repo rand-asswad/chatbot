@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['final',['final',['../classScript.html#a3918303573708a77fe61c2ec91865dc9',1,'Script']]]
+  ['cnfclause',['cnfclause',['../classKB.html#a810edf2192bea36c1ec95f4610fc669b',1,'KB']]]
 ];

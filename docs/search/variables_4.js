@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['max',['max',['../classMemory.html#af3c95c183e92e91899dc677c683f2b66',1,'Memory']]],
-  ['mem',['mem',['../classDecomp.html#a31c944c87ebaa500f277279de14e382e',1,'Decomp']]],
-  ['memory',['memory',['../classEliza.html#a2414a3a9a6e096752a27ae5140068c17',1,'Eliza']]]
+  ['id',['id',['../classAction.html#ae2c2239aee4b28f7c90f3dfa7abc060a',1,'Action::id()'],['../classPercept.html#a87baa8b4903f43f03a86430185a36840',1,'Percept::id()']]],
+  ['inputstream',['inputStream',['../classAgent.html#af9d3de27eff21068dca2e7d73f6bdd3e',1,'Agent']]]
 ];

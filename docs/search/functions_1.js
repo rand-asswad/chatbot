@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['collectkeys',['collectKeys',['../classEliza.html#adb573920365f86efd4974fa1af6e4f47',1,'Eliza']]]
+  ['backwardchain',['backwardChain',['../classKB.html#a27a8db9fc36354f1f6eb247dfcb58adc',1,'KB']]]
 ];

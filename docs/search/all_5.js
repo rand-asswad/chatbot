@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['getagentname',['getAgentName',['../classTerminalClient.html#a97a1cfd5eda26f6f8902f6dbe498794e',1,'TerminalClient']]],
-  ['getkey',['getKey',['../classScript.html#a027acbd1cfa4440c9eb51a2b6c91c6a0',1,'Script']]],
-  ['greetuser',['greetUser',['../classAgent.html#a753289e615d0fbe962453695e41bd0b6',1,'Agent::greetUser()'],['../classEliza.html#a87224cd89d0e0dafbc2e8883d1a83f14',1,'Eliza::greetUser()']]],
-  ['guiclient',['GUIclient',['../classGUIclient.html',1,'']]]
+  ['facts',['facts',['../classKB.html#abf6528e5e8b106c9ec57dc6a8fb86ee7',1,'KB']]],
+  ['flanalyser',['FLAnalyser',['../classFLAnalyser.html',1,'']]],
+  ['flanalyser_2eh',['FLAnalyser.h',['../FLAnalyser_8h.html',1,'']]],
+  ['forwardchain',['forwardChain',['../classKB.html#a1d77685c04f42bb2fba29ed81773dbc7',1,'KB']]]
 ];

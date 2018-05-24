@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outputstream',['outputStream',['../classAgent.html#ac00b0a19e22cbda3d748704b073f373a',1,'Agent']]]
+  ['memory',['memory',['../classEliza.html#a2414a3a9a6e096752a27ae5140068c17',1,'Eliza']]]
 ];

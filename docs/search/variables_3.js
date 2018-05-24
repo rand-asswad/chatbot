@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['key',['key',['../classDecomp.html#aac5121057365009504733971b61b5144',1,'Decomp']]],
-  ['keys',['keys',['../classScript.html#ad1fcd3868d74927bd60118f0e4eaf574',1,'Script']]]
+  ['facts',['facts',['../classKB.html#abf6528e5e8b106c9ec57dc6a8fb86ee7',1,'KB']]]
 ];

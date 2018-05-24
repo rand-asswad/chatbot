@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lower',['lower',['../classString.html#a56e0fc9171e2d63b4c182a30ad0abcd7',1,'String']]]
+  ['kbanalyser',['KBAnalyser',['../classKBAnalyser.html#affef4d1e6d712d466457a2155df4febe',1,'KBAnalyser']]]
 ];
