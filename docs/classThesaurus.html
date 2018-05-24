@@ -69,6 +69,11 @@ $(function() {
 <div class="title">Thesaurus Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>List of <a class="el" href="classSynonyms.html" title="List of synonyms. ">Synonyms</a> objects.  
+ <a href="classThesaurus.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Thesaurus_8h_source.html">Thesaurus.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Thesaurus:</div>
 <div class="dyncontent">
@@ -80,8 +85,7 @@ Inheritance diagram for Thesaurus:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab21a3efabe41ac712734cbcc6d7d4414"><td class="memItemLeft" align="right" valign="top"><a id="ab21a3efabe41ac712734cbcc6d7d4414"></a>
-<a class="el" href="classSynonyms.html">Synonyms</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>findSynonyms</b> (<a class="el" href="classString.html">String</a> word)</td></tr>
+<tr class="memitem:ab21a3efabe41ac712734cbcc6d7d4414"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSynonyms.html">Synonyms</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThesaurus.html#ab21a3efabe41ac712734cbcc6d7d4414">findSynonyms</a> (<a class="el" href="classString.html">String</a> word)</td></tr>
 <tr class="separator:ab21a3efabe41ac712734cbcc6d7d4414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -90,6 +94,35 @@ Friends</h2></td></tr>
 ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (ostream &amp;os, const <a class="el" href="classThesaurus.html">Thesaurus</a> &amp;thesaurus)</td></tr>
 <tr class="separator:a8cd7efb378b35ca92645c98c8164314b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>List of <a class="el" href="classSynonyms.html" title="List of synonyms. ">Synonyms</a> objects. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab21a3efabe41ac712734cbcc6d7d4414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab21a3efabe41ac712734cbcc6d7d4414">&#9670;&nbsp;</a></span>findSynonyms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSynonyms.html">Synonyms</a> * Thesaurus::findSynonyms </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classString.html">String</a>&#160;</td>
+          <td class="paramname"><em>word</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Finds <a class="el" href="classSynonyms.html" title="List of synonyms. ">Synonyms</a> object containing a given word. Calls <a class="el" href="classSynonyms.html#a36ffe85c896f9293626deab7d6517b51">Synonyms::hasWord</a><br />
+If none found, returns a new synonyms list containing only the given word. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">word</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to synonyms object containing word </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Agent/ELIZA/<a class="el" href="Thesaurus_8h_source.html">Thesaurus.h</a></li>
 <li>src/Agent/ELIZA/Thesaurus.cpp</li>

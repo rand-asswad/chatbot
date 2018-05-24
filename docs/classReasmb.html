@@ -70,23 +70,29 @@ $(function() {
 <div class="title">Reasmb Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Reassembly rule for decomposed sentence.  
+ <a href="classReasmb.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Reasmb_8h_source.html">Reasmb.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b2f5458d8810917c76cfaac15b749d4"><td class="memItemLeft" align="right" valign="top"><a id="a3b2f5458d8810917c76cfaac15b749d4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Reasmb</b> (<a class="el" href="classDecomp.html">Decomp</a> *decomp, const <a class="el" href="classString.html">String</a> &amp;rule)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Reasmb</b> (<a class="el" href="classDecomp.html">Decomp</a> *<a class="el" href="classReasmb.html#a70b89635a2cc4f04cd30ec0bcb0bd0bf">decomp</a>, const <a class="el" href="classString.html">String</a> &amp;<a class="el" href="classReasmb.html#a5f6b1b32f233f3dc7222f324791337c2">rule</a>)</td></tr>
 <tr class="separator:a3b2f5458d8810917c76cfaac15b749d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abba1a0d8940231ac3e9ce7fd39173eb4"><td class="memItemLeft" align="right" valign="top"><a id="abba1a0d8940231ac3e9ce7fd39173eb4"></a>
-<a class="el" href="classString.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>reassemble</b> (vector&lt; <a class="el" href="classString.html">String</a> &gt; matches)</td></tr>
+<tr class="memitem:abba1a0d8940231ac3e9ce7fd39173eb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classString.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReasmb.html#abba1a0d8940231ac3e9ce7fd39173eb4">reassemble</a> (vector&lt; <a class="el" href="classString.html">String</a> &gt; matches)</td></tr>
 <tr class="separator:abba1a0d8940231ac3e9ce7fd39173eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a70b89635a2cc4f04cd30ec0bcb0bd0bf"><td class="memItemLeft" align="right" valign="top"><a id="a70b89635a2cc4f04cd30ec0bcb0bd0bf"></a>
-<a class="el" href="classDecomp.html">Decomp</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>decomp</b></td></tr>
+<a class="el" href="classDecomp.html">Decomp</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReasmb.html#a70b89635a2cc4f04cd30ec0bcb0bd0bf">decomp</a></td></tr>
+<tr class="memdesc:a70b89635a2cc4f04cd30ec0bcb0bd0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to parent decomposition rule. <br /></td></tr>
 <tr class="separator:a70b89635a2cc4f04cd30ec0bcb0bd0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f6b1b32f233f3dc7222f324791337c2"><td class="memItemLeft" align="right" valign="top"><a id="a5f6b1b32f233f3dc7222f324791337c2"></a>
-<a class="el" href="classString.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rule</b></td></tr>
+<a class="el" href="classString.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classReasmb.html#a5f6b1b32f233f3dc7222f324791337c2">rule</a></td></tr>
+<tr class="memdesc:a5f6b1b32f233f3dc7222f324791337c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reassembly rule pattern. <br /></td></tr>
 <tr class="separator:a5f6b1b32f233f3dc7222f324791337c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -95,6 +101,34 @@ Friends</h2></td></tr>
 ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (ostream &amp;os, const <a class="el" href="classReasmb.html">Reasmb</a> &amp;reasmb)</td></tr>
 <tr class="separator:a705525beb8fb25cb1d4b9ba89b055e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Reassembly rule for decomposed sentence. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abba1a0d8940231ac3e9ce7fd39173eb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba1a0d8940231ac3e9ce7fd39173eb4">&#9670;&nbsp;</a></span>reassemble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classString.html">String</a> Reasmb::reassemble </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="classString.html">String</a> &gt;&#160;</td>
+          <td class="paramname"><em>matches</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reassembles sentence from matching expressions. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matches</td><td>output of <a class="el" href="classDecomp.html#a5778e75423e33df37fe2e41157d3bc03">Decomp::decompose</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>reassembled response </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Agent/ELIZA/<a class="el" href="Reasmb_8h_source.html">Reasmb.h</a></li>
 <li>src/Agent/ELIZA/Reasmb.cpp</li>

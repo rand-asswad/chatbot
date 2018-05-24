@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quit',['quit',['../classAgent.html#ac6d993fd4391bbd272be8bcdaeab350c',1,'Agent']]]
+  ['outputstream',['outputStream',['../classAgent.html#ac00b0a19e22cbda3d748704b073f373a',1,'Agent']]]
 ];

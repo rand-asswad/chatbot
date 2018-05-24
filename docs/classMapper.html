@@ -62,13 +62,17 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classMapper-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Mapper Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Hash table for pre/post script elements.  
+ <a href="classMapper.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Mapper_8h_source.html">Mapper.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Mapper:</div>
 <div class="dyncontent">
@@ -78,20 +82,76 @@ Inheritance diagram for Mapper:</div>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapper_1_1AssociationClass1.html">AssociationClass1</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aec2d64e739da82af037709cb63d52064"><td class="memItemLeft" align="right" valign="top"><a id="aec2d64e739da82af037709cb63d52064"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>map</b> (<a class="el" href="classString.html">String</a> src, <a class="el" href="classString.html">String</a> dst)</td></tr>
+<tr class="memitem:aec2d64e739da82af037709cb63d52064"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapper.html#aec2d64e739da82af037709cb63d52064">map</a> (<a class="el" href="classString.html">String</a> src, <a class="el" href="classString.html">String</a> dst)</td></tr>
 <tr class="separator:aec2d64e739da82af037709cb63d52064"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85aa3ff1d18b2bc0ce047dfca08257ae"><td class="memItemLeft" align="right" valign="top"><a id="a85aa3ff1d18b2bc0ce047dfca08257ae"></a>
-<a class="el" href="classString.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b> (<a class="el" href="classString.html">String</a> str)</td></tr>
-<tr class="separator:a85aa3ff1d18b2bc0ce047dfca08257ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5badcd576626a91fc9b0f76345a64ba8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classString.html">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMapper.html#a5badcd576626a91fc9b0f76345a64ba8">translate</a> (<a class="el" href="classString.html">String</a> sentence)</td></tr>
+<tr class="separator:a5badcd576626a91fc9b0f76345a64ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Hash table for pre/post script elements. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aec2d64e739da82af037709cb63d52064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2d64e739da82af037709cb63d52064">&#9670;&nbsp;</a></span>map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mapper::map </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classString.html">String</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classString.html">String</a>&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a new element to hash table. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>key </td></tr>
+    <tr><td class="paramname">dst</td><td>value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5badcd576626a91fc9b0f76345a64ba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5badcd576626a91fc9b0f76345a64ba8">&#9670;&nbsp;</a></span>translate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classString.html">String</a> Mapper::translate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classString.html">String</a>&#160;</td>
+          <td class="paramname"><em>sentence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Translates keywords in a sentence into their values from the hash table. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sentence</td><td>string of words </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Translated sentence </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Agent/ELIZA/<a class="el" href="Mapper_8h_source.html">Mapper.h</a></li>
 <li>src/Agent/ELIZA/Mapper.cpp</li>

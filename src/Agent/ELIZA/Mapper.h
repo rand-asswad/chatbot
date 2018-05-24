@@ -7,15 +7,26 @@
 
 using namespace std;
 
+/**
+ * @brief Hash table for pre/post script elements.
+ */
 class Mapper: public map<String, String> {
-public: 
-    
+public:
     Mapper() = default;
+
+    /**
+     * Adds a new element to hash table.
+     * @param src key
+     * @param dst value
+     */
     void map(String src, String dst);
-    
-    String translate(String str);
-    class AssociationClass1 {
-    };
+
+    /**
+     * Translates keywords in a sentence into their values from the hash table.
+     * @param sentence string of words
+     * @return Translated sentence
+     */
+    String translate(String sentence);
 };
 
 #endif //_MAPPER_H

@@ -68,6 +68,11 @@ $(function() {
 <div class="title">String Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>An extended string class with useful methods.  
+ <a href="classString.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="String_8h_source.html">String.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for String:</div>
 <div class="dyncontent">
@@ -86,18 +91,58 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator int</b> () const</td></tr>
 <tr class="separator:a1ef96bc963263871f16188bd68a57112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac35fdcdc0f90b151c9c2517f97770f5a"><td class="memItemLeft" align="right" valign="top"><a id="ac35fdcdc0f90b151c9c2517f97770f5a"></a>
-vector&lt; <a class="el" href="classString.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>split</b> ()</td></tr>
+vector&lt; <a class="el" href="classString.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classString.html#ac35fdcdc0f90b151c9c2517f97770f5a">split</a> ()</td></tr>
+<tr class="memdesc:ac35fdcdc0f90b151c9c2517f97770f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits string by whitespace into a vector of strings. <br /></td></tr>
 <tr class="separator:ac35fdcdc0f90b151c9c2517f97770f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa27a2e61292f46af4adce6938d1150ce"><td class="memItemLeft" align="right" valign="top"><a id="aa27a2e61292f46af4adce6938d1150ce"></a>
-vector&lt; <a class="el" href="classString.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>split</b> (char)</td></tr>
+vector&lt; <a class="el" href="classString.html">String</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classString.html#aa27a2e61292f46af4adce6938d1150ce">split</a> (char)</td></tr>
+<tr class="memdesc:aa27a2e61292f46af4adce6938d1150ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits string by a given character into a vector of strings. <br /></td></tr>
 <tr class="separator:aa27a2e61292f46af4adce6938d1150ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56e0fc9171e2d63b4c182a30ad0abcd7"><td class="memItemLeft" align="right" valign="top"><a id="a56e0fc9171e2d63b4c182a30ad0abcd7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>lower</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classString.html#a56e0fc9171e2d63b4c182a30ad0abcd7">lower</a> ()</td></tr>
+<tr class="memdesc:a56e0fc9171e2d63b4c182a30ad0abcd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turns string into lowercase. <br /></td></tr>
 <tr class="separator:a56e0fc9171e2d63b4c182a30ad0abcd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca0926e526b84e04a2141cd6aa694d6f"><td class="memItemLeft" align="right" valign="top"><a id="aca0926e526b84e04a2141cd6aa694d6f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>replaceStr</b> (const <a class="el" href="classString.html">String</a> &amp;src, const <a class="el" href="classString.html">String</a> &amp;dst)</td></tr>
+<tr class="memitem:aca0926e526b84e04a2141cd6aa694d6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classString.html#aca0926e526b84e04a2141cd6aa694d6f">replaceStr</a> (const <a class="el" href="classString.html">String</a> &amp;src, const <a class="el" href="classString.html">String</a> &amp;dst)</td></tr>
 <tr class="separator:aca0926e526b84e04a2141cd6aa694d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An extended string class with useful methods. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aca0926e526b84e04a2141cd6aa694d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca0926e526b84e04a2141cd6aa694d6f">&#9670;&nbsp;</a></span>replaceStr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void String::replaceStr </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classString.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classString.html">String</a> &amp;&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Replaces all instances of a string into another </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>string to be replaced </td></tr>
+    <tr><td class="paramname">dst</td><td>string to replace src </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/utils/<a class="el" href="String_8h_source.html">String.h</a></li>
 <li>src/utils/String.cpp</li>

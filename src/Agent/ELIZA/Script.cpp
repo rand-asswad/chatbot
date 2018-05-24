@@ -98,6 +98,19 @@ ostream &operator<<(ostream &os, const Script &parser) {
     return os;
 }
 
+/**
+ * Extracts pattern definition from a line from the script file.
+ * @param line line from script file
+ * @param key script element identifier key
+ * @return extracted pattern if the given key is in line, an empty string otherwise.
+ *
+ * Usage example:
+ * @code
+ * line = "reasmb: Do you feel strongly about discussing such things ?";
+ * pattern = extractPattern(line, "reasmb"); // pattern = "Do you feel strongly about discussing such things ?"
+ * pattern = extractPattern(line, "decomp"); // pattern = ""
+ * @endcode
+ */
 String Script::extractPattern(String line, String key) {
     String expression = key + ":";
     String result;
@@ -117,6 +130,11 @@ Key* Script::getKey(String word) {
     return nullptr;
 }
 
+/**
+ * Creates new Key object and adds it to Script.keys
+ * @param scriptLine output string from Script::extractPattern
+ * @return pointer to created Key
+ */
 Key* Script::newKey(String scriptLine) {
     vector<String> words = scriptLine.split();
     auto key = new Key(words.at(0), int(words.at(1)));

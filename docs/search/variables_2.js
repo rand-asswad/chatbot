@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['memory',['memory',['../classEliza.html#a2414a3a9a6e096752a27ae5140068c17',1,'Eliza']]]
+  ['initial',['initial',['../classScript.html#a179b6b4f3ac3c7d8f4a4dd59ab7c262c',1,'Script']]],
+  ['inputstream',['inputStream',['../classAgent.html#af9d3de27eff21068dca2e7d73f6bdd3e',1,'Agent']]]
 ];

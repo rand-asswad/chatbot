@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['send',['send',['../classWebClient.html#a6a78982b8b198331bddf50ec02b6bc8c',1,'WebClient']]]
+  ['lower',['lower',['../classString.html#a56e0fc9171e2d63b4c182a30ad0abcd7',1,'String']]]
 ];
