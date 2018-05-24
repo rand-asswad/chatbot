@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['debugger',['debugger',['../classAgent.html#a5536c1d6d3beb2d9ccee127d33ceaf2e',1,'Agent']]]
+  ['analyser',['analyser',['../classKB.html#ac8dc8b51b72a89ba4c88bbc93c40b948',1,'KB']]]
 ];

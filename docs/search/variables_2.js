@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name',['name',['../classAgent.html#a18b65b5aff8b98ba9316d6b75b5fc365',1,'Agent']]]
+  ['debugger',['debugger',['../classAgent.html#a5536c1d6d3beb2d9ccee127d33ceaf2e',1,'Agent']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['debugger',['debugger',['../classAgent.html#a5536c1d6d3beb2d9ccee127d33ceaf2e',1,'Agent']]],
-  ['decomp',['Decomp',['../classDecomp.html',1,'']]]
+  ['client',['Client',['../classClient.html',1,'']]],
+  ['cnfclause',['cnfclause',['../classKB.html#a810edf2192bea36c1ec95f4610fc669b',1,'KB']]]
 ];

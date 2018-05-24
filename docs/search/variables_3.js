@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outputstream',['outputStream',['../classAgent.html#ac00b0a19e22cbda3d748704b073f373a',1,'Agent']]]
+  ['facts',['facts',['../classKB.html#abf6528e5e8b106c9ec57dc6a8fb86ee7',1,'KB']]]
 ];

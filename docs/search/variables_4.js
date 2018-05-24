@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quit',['quit',['../classAgent.html#ac6d993fd4391bbd272be8bcdaeab350c',1,'Agent']]]
+  ['id',['id',['../classAction.html#ae2c2239aee4b28f7c90f3dfa7abc060a',1,'Action::id()'],['../classPercept.html#a87baa8b4903f43f03a86430185a36840',1,'Percept::id()']]],
+  ['inputstream',['inputStream',['../classAgent.html#af9d3de27eff21068dca2e7d73f6bdd3e',1,'Agent']]]
 ];
