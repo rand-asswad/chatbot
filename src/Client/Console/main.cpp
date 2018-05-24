@@ -14,31 +14,18 @@ int main() {
 
     // Initialize chatbot
     int bot = 1;//chooseAgent();
+    Agent* agent;
     String srcPath = "src/Agent/";
     if (bot==1) {
         srcPath += "ELIZA/scripts/original";
-        Eliza agent = Eliza(inputStream, outputStream, srcPath);
-        //cout << *(agent.script) << endl;
-
-        auto key = new Key("my", 2);
-        auto decomp = new Decomp(key, "* my* @family *", agent.script->thes);
-        auto reasmb = new Reasmb(decomp, "Tell me more about your (3).");
-        auto syn = agent.script->thes.findSynonyms("family");
-
-
-        String input = "I love my whole family very much";
-        auto matches = decomp->decompose(input);
-        String output = reasmb->reassemble(matches);
-        //cout << output << endl;
-
-        agent.run();
+        agent = new Eliza(inputStream, outputStream, srcPath);
 
     } else {
-        //KBAgent agent = KBAgent(kb);
+        //agent = new KBAgent(kb);
     }
 
     // Run Chatbot
-    //agent.run();
+    agent->run(true);
 
 
     return EXIT_SUCCESS;

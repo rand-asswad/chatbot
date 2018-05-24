@@ -22,10 +22,8 @@ Decomp* Key::findDecomp(String str) {
     for (auto &dp : decomp) {
         expr.assign(dp->pattern);
         if (regex_match(str, expr)) {
-            cout << "***string matched decomp \"" << dp->pattern << "\"\n";
             return dp;
         }
     }
-    cout << "***no decomp for key:\"" << this->name << "\"" << endl;
     return nullptr;
 }
