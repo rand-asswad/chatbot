@@ -1,8 +1,8 @@
 #include <fstream>
 #include <regex>
-#include "ScriptParser.h"
+#include "Script.h"
 
-ScriptParser::ScriptParser(const String &sourcePath) : Parser(sourcePath) {
+Script::Script(const String &sourcePath) : Parser(sourcePath) {
     this->initial = this->final = "";
     this->keys = vector<Key*>();
     this->pre = this->post = Mapper();
@@ -12,15 +12,15 @@ ScriptParser::ScriptParser(const String &sourcePath) : Parser(sourcePath) {
     this->parse();
 }
 
-String ScriptParser::pre_translate(String str) {
+String Script::pre_translate(String str) {
     return this->pre.translate(str);
 }
 
-String ScriptParser::post_translate(String str) {
+String Script::post_translate(String str) {
     return this->post.translate(str);
 }
 
-void ScriptParser::parse() {
+void Script::parse() {
     // keys
     const String key[] = {"initial", "final", "quit", "pre", "post", "synon", "key", "decomp", "reasmb"};
 
@@ -81,7 +81,7 @@ void ScriptParser::parse() {
     scriptFile.close();
 }
 
-ostream &operator<<(ostream &os, const ScriptParser &parser) {
+ostream &operator<<(ostream &os, const Script &parser) {
     os << "<initial: \"" << parser.initial << "\">" << endl;
     os << "<final: \"" << parser.final << "\">" << endl;
     for (String q : parser.quit) os << "<quit: \"" << q << "\">" << endl;
@@ -98,7 +98,7 @@ ostream &operator<<(ostream &os, const ScriptParser &parser) {
     return os;
 }
 
-String ScriptParser::extractPattern(String line, String key) {
+String Script::extractPattern(String line, String key) {
     String expression = key + ":";
     String result;
     size_t pos = line.find(expression);
@@ -110,14 +110,14 @@ String ScriptParser::extractPattern(String line, String key) {
     return result;
 }
 
-Key* ScriptParser::getKey(String word) {
+Key* Script::getKey(String word) {
     for (auto &key : this->keys) {
         if (key->name==word) return key;
     }
     return nullptr;
 }
 
-Key* ScriptParser::newKey(String scriptLine) {
+Key* Script::newKey(String scriptLine) {
     vector<String> words = scriptLine.split();
     auto key = new Key(words.at(0), int(words.at(1)));
     this->keys.push_back(key);

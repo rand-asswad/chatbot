@@ -13,7 +13,7 @@ using namespace std;
 
 class Key;
 
-class ScriptParser: public Parser {
+class Script: public Parser {
 public: 
     String initial;
     String final;
@@ -23,12 +23,12 @@ public:
     vector<String> quit;
     Thesaurus thes;
 
-    ScriptParser(const String &sourcePath);
+    Script(const String &sourcePath);
 
     String pre_translate(String);
     String post_translate(String);
 
-    friend ostream &operator<<(ostream &os, const ScriptParser &parser);
+    friend ostream &operator<<(ostream &os, const Script &parser);
 
     Key* getKey(String word);
 private:

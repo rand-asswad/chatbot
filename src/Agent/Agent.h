@@ -20,6 +20,7 @@ public:
     istream* inputStream;
     /// pointer to output stream
     ostream* outputStream;
+
     /// boolean to quit conversation
     bool quit;
 
@@ -54,6 +55,7 @@ protected:
      * @return output string.
      */
     virtual String greetUser() = 0;
+
     //virtual String bidFarewell() = 0;
 };
 

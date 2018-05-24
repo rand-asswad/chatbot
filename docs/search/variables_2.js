@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name',['name',['../classAgent.html#a18b65b5aff8b98ba9316d6b75b5fc365',1,'Agent']]]
+  ['memory',['memory',['../classEliza.html#a2414a3a9a6e096752a27ae5140068c17',1,'Eliza']]]
 ];

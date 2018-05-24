@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['send',['send',['../classWebClient.html#a6a78982b8b198331bddf50ec02b6bc8c',1,'WebClient']]]
+  ['main',['Main',['../classTerminalClient.html#a278c0a304d0d9496530d3094589389f4',1,'TerminalClient::Main()'],['../classGUIclient.html#aa78d5fe6aabaa8777bf79c60ba6ec301',1,'GUIclient::Main()']]]
 ];
