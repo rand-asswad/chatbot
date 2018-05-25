@@ -1,0 +1,62 @@
+\hypertarget{classString}{}\section{String Class Reference}
+\label{classString}\index{String@{String}}
+
+
+An extended string class with useful methods.  
+
+
+
+
+{\ttfamily \#include $<$String.\+h$>$}
+
+Inheritance diagram for String\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classString}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classString_a6cca2b7683e5d10ef270d09e42e68e00}\label{classString_a6cca2b7683e5d10ef270d09e42e68e00}} 
+{\bfseries String} (const string \&)
+\item 
+\mbox{\Hypertarget{classString_a1ef96bc963263871f16188bd68a57112}\label{classString_a1ef96bc963263871f16188bd68a57112}} 
+{\bfseries operator int} () const
+\item 
+\mbox{\Hypertarget{classString_ac35fdcdc0f90b151c9c2517f97770f5a}\label{classString_ac35fdcdc0f90b151c9c2517f97770f5a}} 
+vector$<$ \mbox{\hyperlink{classString}{String}} $>$ \mbox{\hyperlink{classString_ac35fdcdc0f90b151c9c2517f97770f5a}{split}} ()
+\begin{DoxyCompactList}\small\item\em Splits string by whitespace into a vector of strings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classString_aa27a2e61292f46af4adce6938d1150ce}\label{classString_aa27a2e61292f46af4adce6938d1150ce}} 
+vector$<$ \mbox{\hyperlink{classString}{String}} $>$ \mbox{\hyperlink{classString_aa27a2e61292f46af4adce6938d1150ce}{split}} (char)
+\begin{DoxyCompactList}\small\item\em Splits string by a given character into a vector of strings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classString_a56e0fc9171e2d63b4c182a30ad0abcd7}\label{classString_a56e0fc9171e2d63b4c182a30ad0abcd7}} 
+void \mbox{\hyperlink{classString_a56e0fc9171e2d63b4c182a30ad0abcd7}{lower}} ()
+\begin{DoxyCompactList}\small\item\em Turns string into lowercase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classString_aca0926e526b84e04a2141cd6aa694d6f}{replace\+Str}} (const \mbox{\hyperlink{classString}{String}} \&src, const \mbox{\hyperlink{classString}{String}} \&dst)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An extended string class with useful methods. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classString_aca0926e526b84e04a2141cd6aa694d6f}\label{classString_aca0926e526b84e04a2141cd6aa694d6f}} 
+\index{String@{String}!replace\+Str@{replace\+Str}}
+\index{replace\+Str@{replace\+Str}!String@{String}}
+\subsubsection{\texorpdfstring{replace\+Str()}{replaceStr()}}
+{\footnotesize\ttfamily void String\+::replace\+Str (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classString}{String}} \&}]{src,  }\item[{const \mbox{\hyperlink{classString}{String}} \&}]{dst }\end{DoxyParamCaption})}
+
+Replaces all instances of a string into another 
+\begin{DoxyParams}{Parameters}
+{\em src} & string to be replaced \\
+\hline
+{\em dst} & string to replace src \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/String.\+h\item 
+src/utils/String.\+cpp\end{DoxyCompactItemize}

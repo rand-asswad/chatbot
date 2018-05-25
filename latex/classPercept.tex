@@ -1,0 +1,79 @@
+\hypertarget{classPercept}{}\section{Percept Class Reference}
+\label{classPercept}\index{Percept@{Percept}}
+
+
+This class represents a perception received by the agent (which is of an exclusive text form in our case).  
+
+
+
+
+{\ttfamily \#include $<$Percept.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ \mbox{\hyperlink{classPercept_a3912d5efafea356d07436b791a97684c}{make\+Percept\+Sentence}} (\mbox{\hyperlink{classPercept}{Percept}} p)
+\begin{DoxyCompactList}\small\item\em This function turns a percept into a logical sentence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classPercept_a87baa8b4903f43f03a86430185a36840}{id}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classPercept_acd9d577a5dce1064a78d87f26ec10be7}{string\+\_\+feed}}
+\item 
+vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ \mbox{\hyperlink{classPercept_a4b92db8d220627cd58a61eb8f6d1faa6}{logic\+\_\+feed}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents a perception received by the agent (which is of an exclusive text form in our case). 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPercept_a3912d5efafea356d07436b791a97684c}\label{classPercept_a3912d5efafea356d07436b791a97684c}} 
+\index{Percept@{Percept}!make\+Percept\+Sentence@{make\+Percept\+Sentence}}
+\index{make\+Percept\+Sentence@{make\+Percept\+Sentence}!Percept@{Percept}}
+\subsubsection{\texorpdfstring{make\+Percept\+Sentence()}{makePerceptSentence()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ Percept\+::make\+Percept\+Sentence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPercept}{Percept}}}]{p }\end{DoxyParamCaption})}
+
+
+
+This function turns a percept into a logical sentence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The percepts to be converted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A logical sentence. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classPercept_a87baa8b4903f43f03a86430185a36840}\label{classPercept_a87baa8b4903f43f03a86430185a36840}} 
+\index{Percept@{Percept}!id@{id}}
+\index{id@{id}!Percept@{Percept}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Percept\+::id}
+
+Each percept bears a unique number. \mbox{\Hypertarget{classPercept_a4b92db8d220627cd58a61eb8f6d1faa6}\label{classPercept_a4b92db8d220627cd58a61eb8f6d1faa6}} 
+\index{Percept@{Percept}!logic\+\_\+feed@{logic\+\_\+feed}}
+\index{logic\+\_\+feed@{logic\+\_\+feed}!Percept@{Percept}}
+\subsubsection{\texorpdfstring{logic\+\_\+feed}{logic\_feed}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classSentence}{Sentence}}$>$ Percept\+::logic\+\_\+feed\hspace{0.3cm}{\ttfamily [private]}}
+
+Represents the logical form of a percept. \mbox{\Hypertarget{classPercept_acd9d577a5dce1064a78d87f26ec10be7}\label{classPercept_acd9d577a5dce1064a78d87f26ec10be7}} 
+\index{Percept@{Percept}!string\+\_\+feed@{string\+\_\+feed}}
+\index{string\+\_\+feed@{string\+\_\+feed}!Percept@{Percept}}
+\subsubsection{\texorpdfstring{string\+\_\+feed}{string\_feed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Percept\+::string\+\_\+feed\hspace{0.3cm}{\ttfamily [private]}}
+
+Represents the text form of a percept. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+Knowledge\+Base/\mbox{\hyperlink{Percept_8h}{Percept.\+h}}\item 
+src/\+Agent/\+Knowledge\+Base/Percept.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\hypertarget{classAction}{}\section{Action Class Reference}
+\label{classAction}\index{Action@{Action}}
+
+
+Represents an action undertaken by the knowledge-\/based agent.  
+
+
+
+
+{\ttfamily \#include $<$Action.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classAction_a6fc4f01bddc1431da13be9c4d93beece}{make\+Action\+Text}} (vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ a)
+\begin{DoxyCompactList}\small\item\em Converts an action its logical form to its string form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ \mbox{\hyperlink{classAction_ab7c26e0f05deddc0a8bf9c3cfd1da11c}{make\+Action\+Query}} (\mbox{\hyperlink{classKB}{KB}} kb, int t)
+\begin{DoxyCompactList}\small\item\em This function generates an action from a query at a given time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classAction_ae2c2239aee4b28f7c90f3dfa7abc060a}{id}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classAction_a22cc7c6c8cc34293f94713542eb7f353}{string\+\_\+feed}}
+\item 
+vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ \mbox{\hyperlink{classAction_ab3623cf8b6271dec461907a3e68687e4}{logic\+\_\+feed}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents an action undertaken by the knowledge-\/based agent. 
+
+Due to the agent being a conversational one, the action will be represented by a string. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAction_ab7c26e0f05deddc0a8bf9c3cfd1da11c}\label{classAction_ab7c26e0f05deddc0a8bf9c3cfd1da11c}} 
+\index{Action@{Action}!make\+Action\+Query@{make\+Action\+Query}}
+\index{make\+Action\+Query@{make\+Action\+Query}!Action@{Action}}
+\subsubsection{\texorpdfstring{make\+Action\+Query()}{makeActionQuery()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ Action\+::make\+Action\+Query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKB}{KB}}}]{kb,  }\item[{int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This function generates an action from a query at a given time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kb} & Represents the knowledge base. \\
+\hline
+{\em t} & Elapsed time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An action in it\textquotesingle{}s logical form. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAction_a6fc4f01bddc1431da13be9c4d93beece}\label{classAction_a6fc4f01bddc1431da13be9c4d93beece}} 
+\index{Action@{Action}!make\+Action\+Text@{make\+Action\+Text}}
+\index{make\+Action\+Text@{make\+Action\+Text}!Action@{Action}}
+\subsubsection{\texorpdfstring{make\+Action\+Text()}{makeActionText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Action\+::make\+Action\+Text (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$}]{a }\end{DoxyParamCaption})}
+
+
+
+Converts an action its logical form to its string form. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The action expressed in logical terms. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Text form of an action. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classAction_ae2c2239aee4b28f7c90f3dfa7abc060a}\label{classAction_ae2c2239aee4b28f7c90f3dfa7abc060a}} 
+\index{Action@{Action}!id@{id}}
+\index{id@{id}!Action@{Action}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Action\+::id}
+
+Each action bears a unique number \mbox{\Hypertarget{classAction_ab3623cf8b6271dec461907a3e68687e4}\label{classAction_ab3623cf8b6271dec461907a3e68687e4}} 
+\index{Action@{Action}!logic\+\_\+feed@{logic\+\_\+feed}}
+\index{logic\+\_\+feed@{logic\+\_\+feed}!Action@{Action}}
+\subsubsection{\texorpdfstring{logic\+\_\+feed}{logic\_feed}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classSentence}{Sentence}}$>$ Action\+::logic\+\_\+feed\hspace{0.3cm}{\ttfamily [private]}}
+
+Represents the logical form of the action \mbox{\Hypertarget{classAction_a22cc7c6c8cc34293f94713542eb7f353}\label{classAction_a22cc7c6c8cc34293f94713542eb7f353}} 
+\index{Action@{Action}!string\+\_\+feed@{string\+\_\+feed}}
+\index{string\+\_\+feed@{string\+\_\+feed}!Action@{Action}}
+\subsubsection{\texorpdfstring{string\+\_\+feed}{string\_feed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Action\+::string\+\_\+feed\hspace{0.3cm}{\ttfamily [private]}}
+
+Represents the text form of the action 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+Knowledge\+Base/\mbox{\hyperlink{Action_8h}{Action.\+h}}\item 
+src/\+Agent/\+Knowledge\+Base/Action.\+cpp\end{DoxyCompactItemize}

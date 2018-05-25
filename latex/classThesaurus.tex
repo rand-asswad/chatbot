@@ -1,0 +1,55 @@
+\hypertarget{classThesaurus}{}\section{Thesaurus Class Reference}
+\label{classThesaurus}\index{Thesaurus@{Thesaurus}}
+
+
+List of \mbox{\hyperlink{classSynonyms}{Synonyms}} objects.  
+
+
+
+
+{\ttfamily \#include $<$Thesaurus.\+h$>$}
+
+Inheritance diagram for Thesaurus\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classThesaurus}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSynonyms}{Synonyms}} $\ast$ \mbox{\hyperlink{classThesaurus_ab21a3efabe41ac712734cbcc6d7d4414}{find\+Synonyms}} (\mbox{\hyperlink{classString}{String}} word)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classThesaurus_a8cd7efb378b35ca92645c98c8164314b}\label{classThesaurus_a8cd7efb378b35ca92645c98c8164314b}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \mbox{\hyperlink{classThesaurus}{Thesaurus}} \&thesaurus)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+List of \mbox{\hyperlink{classSynonyms}{Synonyms}} objects. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classThesaurus_ab21a3efabe41ac712734cbcc6d7d4414}\label{classThesaurus_ab21a3efabe41ac712734cbcc6d7d4414}} 
+\index{Thesaurus@{Thesaurus}!find\+Synonyms@{find\+Synonyms}}
+\index{find\+Synonyms@{find\+Synonyms}!Thesaurus@{Thesaurus}}
+\subsubsection{\texorpdfstring{find\+Synonyms()}{findSynonyms()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSynonyms}{Synonyms}} $\ast$ Thesaurus\+::find\+Synonyms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{word }\end{DoxyParamCaption})}
+
+Finds \mbox{\hyperlink{classSynonyms}{Synonyms}} object containing a given word. Calls \mbox{\hyperlink{classSynonyms_a36ffe85c896f9293626deab7d6517b51}{Synonyms\+::has\+Word}}~\newline
+If none found, returns a new synonyms list containing only the given word. 
+\begin{DoxyParams}{Parameters}
+{\em word} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to synonyms object containing word 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Thesaurus.\+h\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Thesaurus.\+cpp\end{DoxyCompactItemize}

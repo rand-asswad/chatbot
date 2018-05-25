@@ -1,0 +1,113 @@
+\hypertarget{classDecomp}{}\section{Decomp Class Reference}
+\label{classDecomp}\index{Decomp@{Decomp}}
+
+
+Decomposition rule for a sentence.  
+
+
+
+
+{\ttfamily \#include $<$Decomp.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDecomp_a01a72f90b40f1f7ba98349443f3d0b1c}{Decomp}} (\mbox{\hyperlink{classKey}{Key}} $\ast$\mbox{\hyperlink{classDecomp_aac5121057365009504733971b61b5144}{key}}, \mbox{\hyperlink{classString}{String}} script\+Line, \mbox{\hyperlink{classThesaurus}{Thesaurus}} thes)
+\item 
+void \mbox{\hyperlink{classDecomp_a8ff1983b817d90d03b5f2726cc2e7af8}{new\+Reasmb}} (\mbox{\hyperlink{classString}{String}} reasmb)
+\item 
+vector$<$ \mbox{\hyperlink{classString}{String}} $>$ \mbox{\hyperlink{classDecomp_a5778e75423e33df37fe2e41157d3bc03}{decompose}} (\mbox{\hyperlink{classString}{String}} str)
+\item 
+\mbox{\hyperlink{classReasmb}{Reasmb}} $\ast$ \mbox{\hyperlink{classDecomp_ae3a21380fd65ef17ca0c1b4bb4aa7875}{next\+Rule}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDecomp_aa306bb725aade0708e3796b362b7eb50}\label{classDecomp_aa306bb725aade0708e3796b362b7eb50}} 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classDecomp_aa306bb725aade0708e3796b362b7eb50}{pattern}}
+\begin{DoxyCompactList}\small\item\em Decomposition R\+E\+G\+EX pattern. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDecomp_a2ca89dea0471f80c7921955fafdf8513}\label{classDecomp_a2ca89dea0471f80c7921955fafdf8513}} 
+vector$<$ \mbox{\hyperlink{classReasmb}{Reasmb}} $\ast$ $>$ \mbox{\hyperlink{classDecomp_a2ca89dea0471f80c7921955fafdf8513}{reassemb}}
+\begin{DoxyCompactList}\small\item\em List of reassembly rules for decomposition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDecomp_aac5121057365009504733971b61b5144}\label{classDecomp_aac5121057365009504733971b61b5144}} 
+\mbox{\hyperlink{classKey}{Key}} $\ast$ \mbox{\hyperlink{classDecomp_aac5121057365009504733971b61b5144}{key}}
+\begin{DoxyCompactList}\small\item\em Pointer to parent \mbox{\hyperlink{classKey}{Key}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDecomp_a31c944c87ebaa500f277279de14e382e}\label{classDecomp_a31c944c87ebaa500f277279de14e382e}} 
+bool \mbox{\hyperlink{classDecomp_a31c944c87ebaa500f277279de14e382e}{mem}}
+\begin{DoxyCompactList}\small\item\em save decomposition rule in memory ? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDecomp_ad0e34d40664740f5d4743474ed607262}\label{classDecomp_ad0e34d40664740f5d4743474ed607262}} 
+size\+\_\+t \mbox{\hyperlink{classDecomp_ad0e34d40664740f5d4743474ed607262}{reassemb\+Rule}} = -\/1
+\begin{DoxyCompactList}\small\item\em current reassembly rule index in \mbox{\hyperlink{classDecomp_a2ca89dea0471f80c7921955fafdf8513}{Decomp.\+reassemb}}, -\/1 if not assigned. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDecomp_aca677c336732ff9d6ac1d4ac6f000dd7}\label{classDecomp_aca677c336732ff9d6ac1d4ac6f000dd7}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \mbox{\hyperlink{classDecomp}{Decomp}} \&decomp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Decomposition rule for a sentence. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDecomp_a01a72f90b40f1f7ba98349443f3d0b1c}\label{classDecomp_a01a72f90b40f1f7ba98349443f3d0b1c}} 
+\index{Decomp@{Decomp}!Decomp@{Decomp}}
+\index{Decomp@{Decomp}!Decomp@{Decomp}}
+\subsubsection{\texorpdfstring{Decomp()}{Decomp()}}
+{\footnotesize\ttfamily Decomp\+::\+Decomp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKey}{Key}} $\ast$}]{key,  }\item[{\mbox{\hyperlink{classString}{String}}}]{script\+Line,  }\item[{\mbox{\hyperlink{classThesaurus}{Thesaurus}}}]{thes }\end{DoxyParamCaption})}
+
+Default constructor, translates script pattern (special format) into R\+E\+G\+EX. 
+\begin{DoxyParams}{Parameters}
+{\em key} & parent \mbox{\hyperlink{classKey}{Key}} \\
+\hline
+{\em script\+Line} & output string from \mbox{\hyperlink{classScript_a946d037839b4caada09e22a428c8f42e}{Script\+::extract\+Pattern}} \\
+\hline
+{\em thes} & \mbox{\hyperlink{classThesaurus}{Thesaurus}} object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDecomp_a5778e75423e33df37fe2e41157d3bc03}\label{classDecomp_a5778e75423e33df37fe2e41157d3bc03}} 
+\index{Decomp@{Decomp}!decompose@{decompose}}
+\index{decompose@{decompose}!Decomp@{Decomp}}
+\subsubsection{\texorpdfstring{decompose()}{decompose()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classString}{String}} $>$ Decomp\+::decompose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{str }\end{DoxyParamCaption})}
+
+Decomposes a sentence according. 
+\begin{DoxyParams}{Parameters}
+{\em str} & input sentence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of matching expressions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDecomp_a8ff1983b817d90d03b5f2726cc2e7af8}\label{classDecomp_a8ff1983b817d90d03b5f2726cc2e7af8}} 
+\index{Decomp@{Decomp}!new\+Reasmb@{new\+Reasmb}}
+\index{new\+Reasmb@{new\+Reasmb}!Decomp@{Decomp}}
+\subsubsection{\texorpdfstring{new\+Reasmb()}{newReasmb()}}
+{\footnotesize\ttfamily void Decomp\+::new\+Reasmb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{reasmb }\end{DoxyParamCaption})}
+
+Creates new reassembly object, adds it to \mbox{\hyperlink{classDecomp_a2ca89dea0471f80c7921955fafdf8513}{Decomp.\+reassemb}} and links it with the parent \mbox{\hyperlink{classDecomp}{Decomp}} object. 
+\begin{DoxyParams}{Parameters}
+{\em reasmb} & reassembly rule pattern. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDecomp_ae3a21380fd65ef17ca0c1b4bb4aa7875}\label{classDecomp_ae3a21380fd65ef17ca0c1b4bb4aa7875}} 
+\index{Decomp@{Decomp}!next\+Rule@{next\+Rule}}
+\index{next\+Rule@{next\+Rule}!Decomp@{Decomp}}
+\subsubsection{\texorpdfstring{next\+Rule()}{nextRule()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classReasmb}{Reasmb}} $\ast$ Decomp\+::next\+Rule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+pointer to a random rassembly rule 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Decomp.\+h\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Decomp.\+cpp\end{DoxyCompactItemize}

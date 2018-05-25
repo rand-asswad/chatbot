@@ -1,0 +1,123 @@
+\hypertarget{classAgent}{}\section{Agent Class Reference}
+\label{classAgent}\index{Agent@{Agent}}
+
+
+Processes input speech and generates output.  
+
+
+
+
+{\ttfamily \#include $<$Agent.\+h$>$}
+
+Inheritance diagram for Agent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAgent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAgent_a3db4a9cfcea636c9d63ec73729225fc8}{Agent}} (istream $\ast$input, ostream $\ast$output)
+\item 
+void \mbox{\hyperlink{classAgent_a5e176f9a9b2a9269506cc172c1e2b897}{run}} (bool debug=false)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAgent_a18b65b5aff8b98ba9316d6b75b5fc365}\label{classAgent_a18b65b5aff8b98ba9316d6b75b5fc365}} 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classAgent_a18b65b5aff8b98ba9316d6b75b5fc365}{name}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAgent}{Agent}} name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAgent_af9d3de27eff21068dca2e7d73f6bdd3e}\label{classAgent_af9d3de27eff21068dca2e7d73f6bdd3e}} 
+istream $\ast$ \mbox{\hyperlink{classAgent_af9d3de27eff21068dca2e7d73f6bdd3e}{input\+Stream}}
+\begin{DoxyCompactList}\small\item\em pointer to input stream \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAgent_ac00b0a19e22cbda3d748704b073f373a}\label{classAgent_ac00b0a19e22cbda3d748704b073f373a}} 
+ostream $\ast$ \mbox{\hyperlink{classAgent_ac00b0a19e22cbda3d748704b073f373a}{output\+Stream}}
+\begin{DoxyCompactList}\small\item\em pointer to output stream \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAgent_ac6d993fd4391bbd272be8bcdaeab350c}\label{classAgent_ac6d993fd4391bbd272be8bcdaeab350c}} 
+bool \mbox{\hyperlink{classAgent_ac6d993fd4391bbd272be8bcdaeab350c}{quit}}
+\begin{DoxyCompactList}\small\item\em boolean to quit conversation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classAgent_a8908483f8d1302ec8dd65539369de9bb}{process\+Input}} (\mbox{\hyperlink{classString}{String}} input)=0
+\item 
+virtual \mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classAgent_a753289e615d0fbe962453695e41bd0b6}{greet\+User}} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAgent_a5536c1d6d3beb2d9ccee127d33ceaf2e}\label{classAgent_a5536c1d6d3beb2d9ccee127d33ceaf2e}} 
+ostream $\ast$ \mbox{\hyperlink{classAgent_a5536c1d6d3beb2d9ccee127d33ceaf2e}{debugger}}
+\begin{DoxyCompactList}\small\item\em Pointer to output stream for displaying debug information.~\newline
+Can be used to point to a file stream to write a log file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Processes input speech and generates output. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAgent_a3db4a9cfcea636c9d63ec73729225fc8}\label{classAgent_a3db4a9cfcea636c9d63ec73729225fc8}} 
+\index{Agent@{Agent}!Agent@{Agent}}
+\index{Agent@{Agent}!Agent@{Agent}}
+\subsubsection{\texorpdfstring{Agent()}{Agent()}}
+{\footnotesize\ttfamily Agent\+::\+Agent (\begin{DoxyParamCaption}\item[{istream $\ast$}]{input,  }\item[{ostream $\ast$}]{output }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classAgent}{Agent}} constructor that initializes I/O streams 
+\begin{DoxyParams}{Parameters}
+{\em input} & Pointer to input stream \\
+\hline
+{\em output} & Pointer to output stream \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAgent_a753289e615d0fbe962453695e41bd0b6}\label{classAgent_a753289e615d0fbe962453695e41bd0b6}} 
+\index{Agent@{Agent}!greet\+User@{greet\+User}}
+\index{greet\+User@{greet\+User}!Agent@{Agent}}
+\subsubsection{\texorpdfstring{greet\+User()}{greetUser()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classString}{String}} Agent\+::greet\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Generates greeting at the beginning of the conversation. \begin{DoxyReturn}{Returns}
+output string. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classEliza_a87224cd89d0e0dafbc2e8883d1a83f14}{Eliza}}.
+
+\mbox{\Hypertarget{classAgent_a8908483f8d1302ec8dd65539369de9bb}\label{classAgent_a8908483f8d1302ec8dd65539369de9bb}} 
+\index{Agent@{Agent}!process\+Input@{process\+Input}}
+\index{process\+Input@{process\+Input}!Agent@{Agent}}
+\subsubsection{\texorpdfstring{process\+Input()}{processInput()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classString}{String}} Agent\+::process\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Processes input string and generates response. 
+\begin{DoxyParams}{Parameters}
+{\em input} & User input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Processed output 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classEliza_a9700906fb44016db11cd1183d5a1f1f3}{Eliza}}.
+
+\mbox{\Hypertarget{classAgent_a5e176f9a9b2a9269506cc172c1e2b897}\label{classAgent_a5e176f9a9b2a9269506cc172c1e2b897}} 
+\index{Agent@{Agent}!run@{run}}
+\index{run@{run}!Agent@{Agent}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Agent\+::run (\begin{DoxyParamCaption}\item[{bool}]{debug = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Runs agent until \mbox{\hyperlink{classAgent_ac6d993fd4391bbd272be8bcdaeab350c}{Agent.\+quit}} is true. 
+\begin{DoxyParams}{Parameters}
+{\em debug} & if true, displays running processes. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/Agent.\+h\item 
+src/\+Agent/Agent.\+cpp\end{DoxyCompactItemize}

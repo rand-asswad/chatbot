@@ -1,0 +1,158 @@
+\hypertarget{classScript}{}\section{Script Class Reference}
+\label{classScript}\index{Script@{Script}}
+Inheritance diagram for Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classScript}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classScript_ad9e14ce089abb34c1acb97fcfd161b54}\label{classScript_ad9e14ce089abb34c1acb97fcfd161b54}} 
+{\bfseries Script} (const \mbox{\hyperlink{classString}{String}} \&\mbox{\hyperlink{classParser_a9af73d63c4685837209f362dababa554}{source\+Path}})
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classScript_af94dd912c6276f5130d13740d775200c}{pre\+\_\+translate}} (\mbox{\hyperlink{classString}{String}} str)
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classScript_a754cc2f448013d0a3b400088e460fbe4}{post\+\_\+translate}} (\mbox{\hyperlink{classString}{String}} str)
+\item 
+\mbox{\hyperlink{classKey}{Key}} $\ast$ \mbox{\hyperlink{classScript_a027acbd1cfa4440c9eb51a2b6c91c6a0}{get\+Key}} (\mbox{\hyperlink{classString}{String}} word)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classScript_a179b6b4f3ac3c7d8f4a4dd59ab7c262c}\label{classScript_a179b6b4f3ac3c7d8f4a4dd59ab7c262c}} 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classScript_a179b6b4f3ac3c7d8f4a4dd59ab7c262c}{initial}}
+\begin{DoxyCompactList}\small\item\em Initial string to greet user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classScript_a3918303573708a77fe61c2ec91865dc9}\label{classScript_a3918303573708a77fe61c2ec91865dc9}} 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classScript_a3918303573708a77fe61c2ec91865dc9}{final}}
+\begin{DoxyCompactList}\small\item\em Final string to bid farewell to user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classScript_ab338df3426a5f488be94ec6c15393ba6}\label{classScript_ab338df3426a5f488be94ec6c15393ba6}} 
+\mbox{\hyperlink{classMapper}{Mapper}} \mbox{\hyperlink{classScript_ab338df3426a5f488be94ec6c15393ba6}{pre}}
+\begin{DoxyCompactList}\small\item\em Pre-\/processing map database. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classScript_ac73831210ecd442bbeafbd9a496bb042}\label{classScript_ac73831210ecd442bbeafbd9a496bb042}} 
+\mbox{\hyperlink{classMapper}{Mapper}} \mbox{\hyperlink{classScript_ac73831210ecd442bbeafbd9a496bb042}{post}}
+\begin{DoxyCompactList}\small\item\em Post-\/processing map database. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classScript_ad1fcd3868d74927bd60118f0e4eaf574}\label{classScript_ad1fcd3868d74927bd60118f0e4eaf574}} 
+vector$<$ \mbox{\hyperlink{classKey}{Key}} $\ast$ $>$ \mbox{\hyperlink{classScript_ad1fcd3868d74927bd60118f0e4eaf574}{keys}}
+\begin{DoxyCompactList}\small\item\em List of keywords in database. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classScript_a187f8b939336ed6f1a5b7cf44526eacf}\label{classScript_a187f8b939336ed6f1a5b7cf44526eacf}} 
+vector$<$ \mbox{\hyperlink{classString}{String}} $>$ \mbox{\hyperlink{classScript_a187f8b939336ed6f1a5b7cf44526eacf}{quit}}
+\begin{DoxyCompactList}\small\item\em List of strings that the user can enter to end the conversation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classScript_afaaa5f986fb3638e31c51231408cfbeb}\label{classScript_afaaa5f986fb3638e31c51231408cfbeb}} 
+\mbox{\hyperlink{classThesaurus}{Thesaurus}} \mbox{\hyperlink{classScript_afaaa5f986fb3638e31c51231408cfbeb}{thes}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classThesaurus}{Thesaurus}} (list of synonyms) in database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classScript_a4bb2f5d77aed84a9f0dc9298894abd1c}{parse}} () override
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classScript_a946d037839b4caada09e22a428c8f42e}{extract\+Pattern}} (\mbox{\hyperlink{classString}{String}} line, \mbox{\hyperlink{classString}{String}} key)
+\item 
+\mbox{\hyperlink{classKey}{Key}} $\ast$ \mbox{\hyperlink{classScript_a5edeec2fa0d7e46e0795715810a031d8}{new\+Key}} (\mbox{\hyperlink{classString}{String}} script\+Line)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classScript_a28fbd10cd3ac6e431b96d64453c23dec}\label{classScript_a28fbd10cd3ac6e431b96d64453c23dec}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \mbox{\hyperlink{classScript}{Script}} \&parser)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classScript_a946d037839b4caada09e22a428c8f42e}\label{classScript_a946d037839b4caada09e22a428c8f42e}} 
+\index{Script@{Script}!extract\+Pattern@{extract\+Pattern}}
+\index{extract\+Pattern@{extract\+Pattern}!Script@{Script}}
+\subsubsection{\texorpdfstring{extract\+Pattern()}{extractPattern()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Script\+::extract\+Pattern (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{line,  }\item[{\mbox{\hyperlink{classString}{String}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Extracts pattern definition from a line from the script file. 
+\begin{DoxyParams}{Parameters}
+{\em line} & line from script file \\
+\hline
+{\em key} & script element identifier key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+extracted pattern if the given key is in line, an empty string otherwise.
+\end{DoxyReturn}
+Usage example\+: 
+\begin{DoxyCode}
+line = \textcolor{stringliteral}{"reasmb: Do you feel strongly about discussing such things ?"};
+pattern = \mbox{\hyperlink{classScript_a946d037839b4caada09e22a428c8f42e}{extractPattern}}(line, \textcolor{stringliteral}{"reasmb"}); \textcolor{comment}{// pattern = "Do you feel strongly about discussing
+       such things ?"}
+pattern = \mbox{\hyperlink{classScript_a946d037839b4caada09e22a428c8f42e}{extractPattern}}(line, \textcolor{stringliteral}{"decomp"}); \textcolor{comment}{// pattern = ""}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classScript_a027acbd1cfa4440c9eb51a2b6c91c6a0}\label{classScript_a027acbd1cfa4440c9eb51a2b6c91c6a0}} 
+\index{Script@{Script}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!Script@{Script}}
+\subsubsection{\texorpdfstring{get\+Key()}{getKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKey}{Key}} $\ast$ Script\+::get\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{word }\end{DoxyParamCaption})}
+
+Finds keyword in database 
+\begin{DoxyParams}{Parameters}
+{\em word} & given word \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+associated \mbox{\hyperlink{classKey}{Key}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScript_a5edeec2fa0d7e46e0795715810a031d8}\label{classScript_a5edeec2fa0d7e46e0795715810a031d8}} 
+\index{Script@{Script}!new\+Key@{new\+Key}}
+\index{new\+Key@{new\+Key}!Script@{Script}}
+\subsubsection{\texorpdfstring{new\+Key()}{newKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKey}{Key}} $\ast$ Script\+::new\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{script\+Line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Creates new \mbox{\hyperlink{classKey}{Key}} object and adds it to \mbox{\hyperlink{classScript_ad1fcd3868d74927bd60118f0e4eaf574}{Script.\+keys}} 
+\begin{DoxyParams}{Parameters}
+{\em script\+Line} & output string from \mbox{\hyperlink{classScript_a946d037839b4caada09e22a428c8f42e}{Script\+::extract\+Pattern}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to created \mbox{\hyperlink{classKey}{Key}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScript_a4bb2f5d77aed84a9f0dc9298894abd1c}\label{classScript_a4bb2f5d77aed84a9f0dc9298894abd1c}} 
+\index{Script@{Script}!parse@{parse}}
+\index{parse@{parse}!Script@{Script}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily void Script\+::parse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Called by constructor to parse data from source file. 
+
+Implements \mbox{\hyperlink{classParser_a1df9aa58be0f4027a39277d78b870195}{Parser}}.
+
+\mbox{\Hypertarget{classScript_a754cc2f448013d0a3b400088e460fbe4}\label{classScript_a754cc2f448013d0a3b400088e460fbe4}} 
+\index{Script@{Script}!post\+\_\+translate@{post\+\_\+translate}}
+\index{post\+\_\+translate@{post\+\_\+translate}!Script@{Script}}
+\subsubsection{\texorpdfstring{post\+\_\+translate()}{post\_translate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Script\+::post\+\_\+translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{str }\end{DoxyParamCaption})}
+
+Post-\/translates output string 
+\begin{DoxyParams}{Parameters}
+{\em output} & raw output string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+processed output 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classScript_af94dd912c6276f5130d13740d775200c}\label{classScript_af94dd912c6276f5130d13740d775200c}} 
+\index{Script@{Script}!pre\+\_\+translate@{pre\+\_\+translate}}
+\index{pre\+\_\+translate@{pre\+\_\+translate}!Script@{Script}}
+\subsubsection{\texorpdfstring{pre\+\_\+translate()}{pre\_translate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Script\+::pre\+\_\+translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{str }\end{DoxyParamCaption})}
+
+Pre-\/translates input string 
+\begin{DoxyParams}{Parameters}
+{\em input} & user\textquotesingle{}s raw input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+processed input 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Script.\+h\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Script.\+cpp\end{DoxyCompactItemize}

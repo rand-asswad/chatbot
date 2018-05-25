@@ -1,0 +1,88 @@
+\hypertarget{classSynonyms}{}\section{Synonyms Class Reference}
+\label{classSynonyms}\index{Synonyms@{Synonyms}}
+
+
+List of synonyms.  
+
+
+
+
+{\ttfamily \#include $<$Synonyms.\+h$>$}
+
+Inheritance diagram for Synonyms\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSynonyms}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSynonyms_ac3bc326580cfe3de1bab88d71e5dcaed}{Synonyms}} (const \mbox{\hyperlink{classString}{String}} word)
+\begin{DoxyCompactList}\small\item\em Default constructor\+: creates an empty list and adds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSynonyms_adfe3753a58fa0eb1d4b2409351f040c4}\label{classSynonyms_adfe3753a58fa0eb1d4b2409351f040c4}} 
+\mbox{\hyperlink{classSynonyms_adfe3753a58fa0eb1d4b2409351f040c4}{Synonyms}} (const vector$<$ \mbox{\hyperlink{classString}{String}} $>$ \&\+\_\+\+\_\+x)
+\begin{DoxyCompactList}\small\item\em Constructor\+: creates list from a vector of words. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classSynonyms_abe26e020a2d097a225bc0527253d9c63}{as\+Regex}} ()
+\item 
+bool \mbox{\hyperlink{classSynonyms_a36ffe85c896f9293626deab7d6517b51}{has\+Word}} (\mbox{\hyperlink{classString}{String}} word)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSynonyms_a6ee5cdecaeba3d88a245f0b9db2d2758}\label{classSynonyms_a6ee5cdecaeba3d88a245f0b9db2d2758}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \mbox{\hyperlink{classSynonyms}{Synonyms}} \&synonyms)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+List of synonyms. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSynonyms_ac3bc326580cfe3de1bab88d71e5dcaed}\label{classSynonyms_ac3bc326580cfe3de1bab88d71e5dcaed}} 
+\index{Synonyms@{Synonyms}!Synonyms@{Synonyms}}
+\index{Synonyms@{Synonyms}!Synonyms@{Synonyms}}
+\subsubsection{\texorpdfstring{Synonyms()}{Synonyms()}}
+{\footnotesize\ttfamily Synonyms\+::\+Synonyms (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classString}{String}}}]{word }\end{DoxyParamCaption})}
+
+
+
+Default constructor\+: creates an empty list and adds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word} & into the list. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSynonyms_abe26e020a2d097a225bc0527253d9c63}\label{classSynonyms_abe26e020a2d097a225bc0527253d9c63}} 
+\index{Synonyms@{Synonyms}!as\+Regex@{as\+Regex}}
+\index{as\+Regex@{as\+Regex}!Synonyms@{Synonyms}}
+\subsubsection{\texorpdfstring{as\+Regex()}{asRegex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Synonyms\+::as\+Regex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Translates synonyms list into a R\+E\+G\+EX group expression. \begin{DoxyReturn}{Returns}
+words list separated by \char`\"{}$\vert$\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSynonyms_a36ffe85c896f9293626deab7d6517b51}\label{classSynonyms_a36ffe85c896f9293626deab7d6517b51}} 
+\index{Synonyms@{Synonyms}!has\+Word@{has\+Word}}
+\index{has\+Word@{has\+Word}!Synonyms@{Synonyms}}
+\subsubsection{\texorpdfstring{has\+Word()}{hasWord()}}
+{\footnotesize\ttfamily bool Synonyms\+::has\+Word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{word }\end{DoxyParamCaption})}
+
+Searches for a word in synonyms list. 
+\begin{DoxyParams}{Parameters}
+{\em word} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if word in list, False otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Synonyms.\+h\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Synonyms.\+cpp\end{DoxyCompactItemize}

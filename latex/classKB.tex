@@ -1,0 +1,234 @@
+\hypertarget{classKB}{}\section{KB Class Reference}
+\label{classKB}\index{KB@{KB}}
+
+
+This class represents our knowledge base.  
+
+
+
+
+{\ttfamily \#include $<$K\+B.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classKB_ab0b72bc95f5f3cd72ec0d01a10310b9f}{tell}} (\mbox{\hyperlink{classKB}{KB}} kb, vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ s)
+\begin{DoxyCompactList}\small\item\em This function adds a new rule to the knowledge base. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ \mbox{\hyperlink{classKB_a12ab1eba4e3792f802c943163a308518}{ask}} (\mbox{\hyperlink{classKB}{KB}} kb, vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ s)
+\begin{DoxyCompactList}\small\item\em This function queries the knowledge base and presents the best course of action for the agent to undertake. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKB_afd8d8289f3a2e60e2118b822f5c99576}{entails}} (\mbox{\hyperlink{classKB}{KB}} kb, vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ s)
+\begin{DoxyCompactList}\small\item\em This function checks if a new rule/sentence is logical accordance with the existant rules. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKB_a1d77685c04f42bb2fba29ed81773dbc7}{forward\+Chain}} (\mbox{\hyperlink{classKB}{KB}} kb, vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ s)
+\begin{DoxyCompactList}\small\item\em This function is responsible for deducing new sentences/rules from already existing ones by using the forward chain algorithm. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKB_a27a8db9fc36354f1f6eb247dfcb58adc}{backward\+Chain}} (\mbox{\hyperlink{classKB}{KB}} kb, vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ query)
+\begin{DoxyCompactList}\small\item\em This function is used in itself by the query mechanism in order to infer whether a certain course of action is valid of production following the rules. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ \mbox{\hyperlink{classKB_abbd192b58b489d5123d844b11e1b6355}{train}} (vector$<$ vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$$>$ examples)
+\begin{DoxyCompactList}\small\item\em This function is used to train the agent (by altering the knowledge base) based on different given hypothesis. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKB_acc8495060f0899308126bb8487d970a6}{nb\+Rules}} (\mbox{\hyperlink{classKB}{KB}} kb)
+\begin{DoxyCompactList}\small\item\em Calculates the number of rules in a knowledge base. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKB_abbca13393d5297fcff834849272b98a9}{nb\+Facts}} (\mbox{\hyperlink{classKB}{KB}} kn)
+\begin{DoxyCompactList}\small\item\em Calculates the number of facts present in a knowledge base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ \mbox{\hyperlink{classKB_abf6528e5e8b106c9ec57dc6a8fb86ee7}{facts}}
+\item 
+\mbox{\hyperlink{classKBAnalyser}{K\+B\+Analyser}} \mbox{\hyperlink{classKB_ac8dc8b51b72a89ba4c88bbc93c40b948}{analyser}}
+\item 
+C\+NF \mbox{\hyperlink{classKB_a810edf2192bea36c1ec95f4610fc669b}{cnfclause}}
+\item 
+vector$<$ Rule $>$ \mbox{\hyperlink{classKB_a41204b166f5cf54eac4d59df9f43c07a}{rules}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents our knowledge base. 
+
+The knowledge base holds all the logical sentences and facts which can later be used to infer new facts, ask the database and train the aforementioned. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classKB_a12ab1eba4e3792f802c943163a308518}\label{classKB_a12ab1eba4e3792f802c943163a308518}} 
+\index{KB@{KB}!ask@{ask}}
+\index{ask@{ask}!KB@{KB}}
+\subsubsection{\texorpdfstring{ask()}{ask()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ K\+B\+::ask (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKB}{KB}}}]{kb,  }\item[{vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$}]{s }\end{DoxyParamCaption})}
+
+
+
+This function queries the knowledge base and presents the best course of action for the agent to undertake. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kb} & The knowledge base. \\
+\hline
+{\em s} & A question in the form of a logical sentence. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An action in the form of a sentence. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKB_a27a8db9fc36354f1f6eb247dfcb58adc}\label{classKB_a27a8db9fc36354f1f6eb247dfcb58adc}} 
+\index{KB@{KB}!backward\+Chain@{backward\+Chain}}
+\index{backward\+Chain@{backward\+Chain}!KB@{KB}}
+\subsubsection{\texorpdfstring{backward\+Chain()}{backwardChain()}}
+{\footnotesize\ttfamily bool K\+B\+::backward\+Chain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKB}{KB}}}]{kb,  }\item[{vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$}]{query }\end{DoxyParamCaption})}
+
+
+
+This function is used in itself by the query mechanism in order to infer whether a certain course of action is valid of production following the rules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kb} & The knowledge base \\
+\hline
+{\em query} & A question in the form of a logical sentence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the proposed query is valid. 
+
+false If the proposed query bears logical invalidity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKB_afd8d8289f3a2e60e2118b822f5c99576}\label{classKB_afd8d8289f3a2e60e2118b822f5c99576}} 
+\index{KB@{KB}!entails@{entails}}
+\index{entails@{entails}!KB@{KB}}
+\subsubsection{\texorpdfstring{entails()}{entails()}}
+{\footnotesize\ttfamily bool K\+B\+::entails (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKB}{KB}}}]{kb,  }\item[{vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$}]{s }\end{DoxyParamCaption})}
+
+
+
+This function checks if a new rule/sentence is logical accordance with the existant rules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kb} & The knowledge base. \\
+\hline
+{\em s} & A logical sentence. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the sentence is in accordance with the existant rules. 
+
+false If the sentence clashes with the existant rules. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKB_a1d77685c04f42bb2fba29ed81773dbc7}\label{classKB_a1d77685c04f42bb2fba29ed81773dbc7}} 
+\index{KB@{KB}!forward\+Chain@{forward\+Chain}}
+\index{forward\+Chain@{forward\+Chain}!KB@{KB}}
+\subsubsection{\texorpdfstring{forward\+Chain()}{forwardChain()}}
+{\footnotesize\ttfamily void K\+B\+::forward\+Chain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKB}{KB}}}]{kb,  }\item[{vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$}]{s }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for deducing new sentences/rules from already existing ones by using the forward chain algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kb} & The knowledge base. \\
+\hline
+{\em s} & A logical sentence. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKB_abbca13393d5297fcff834849272b98a9}\label{classKB_abbca13393d5297fcff834849272b98a9}} 
+\index{KB@{KB}!nb\+Facts@{nb\+Facts}}
+\index{nb\+Facts@{nb\+Facts}!KB@{KB}}
+\subsubsection{\texorpdfstring{nb\+Facts()}{nbFacts()}}
+{\footnotesize\ttfamily int K\+B\+::nb\+Facts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKB}{KB}}}]{kn }\end{DoxyParamCaption})}
+
+
+
+Calculates the number of facts present in a knowledge base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kn} & The knowledge base. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The calculated number of facts. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKB_acc8495060f0899308126bb8487d970a6}\label{classKB_acc8495060f0899308126bb8487d970a6}} 
+\index{KB@{KB}!nb\+Rules@{nb\+Rules}}
+\index{nb\+Rules@{nb\+Rules}!KB@{KB}}
+\subsubsection{\texorpdfstring{nb\+Rules()}{nbRules()}}
+{\footnotesize\ttfamily int K\+B\+::nb\+Rules (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKB}{KB}}}]{kb }\end{DoxyParamCaption})}
+
+
+
+Calculates the number of rules in a knowledge base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kb} & The knowledge base. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The calculated number of rules. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKB_ab0b72bc95f5f3cd72ec0d01a10310b9f}\label{classKB_ab0b72bc95f5f3cd72ec0d01a10310b9f}} 
+\index{KB@{KB}!tell@{tell}}
+\index{tell@{tell}!KB@{KB}}
+\subsubsection{\texorpdfstring{tell()}{tell()}}
+{\footnotesize\ttfamily void K\+B\+::tell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKB}{KB}}}]{kb,  }\item[{vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$}]{s }\end{DoxyParamCaption})}
+
+
+
+This function adds a new rule to the knowledge base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kb} & The knowledge base. \\
+\hline
+{\em s} & A rule in the form of a logical sentence. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKB_abbd192b58b489d5123d844b11e1b6355}\label{classKB_abbd192b58b489d5123d844b11e1b6355}} 
+\index{KB@{KB}!train@{train}}
+\index{train@{train}!KB@{KB}}
+\subsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$ K\+B\+::train (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ \mbox{\hyperlink{classSentence}{Sentence}} $>$$>$}]{examples }\end{DoxyParamCaption})}
+
+
+
+This function is used to train the agent (by altering the knowledge base) based on different given hypothesis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em examples} & A set of hypothesis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The best possible hypothesis. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classKB_ac8dc8b51b72a89ba4c88bbc93c40b948}\label{classKB_ac8dc8b51b72a89ba4c88bbc93c40b948}} 
+\index{KB@{KB}!analyser@{analyser}}
+\index{analyser@{analyser}!KB@{KB}}
+\subsubsection{\texorpdfstring{analyser}{analyser}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKBAnalyser}{K\+B\+Analyser}} K\+B\+::analyser\hspace{0.3cm}{\ttfamily [private]}}
+
+The First Order Logic analyser used by the knowledge base. \mbox{\Hypertarget{classKB_a810edf2192bea36c1ec95f4610fc669b}\label{classKB_a810edf2192bea36c1ec95f4610fc669b}} 
+\index{KB@{KB}!cnfclause@{cnfclause}}
+\index{cnfclause@{cnfclause}!KB@{KB}}
+\subsubsection{\texorpdfstring{cnfclause}{cnfclause}}
+{\footnotesize\ttfamily C\+NF K\+B\+::cnfclause\hspace{0.3cm}{\ttfamily [private]}}
+
+A collection of facts expressed in their conjunctive normal form. \mbox{\Hypertarget{classKB_abf6528e5e8b106c9ec57dc6a8fb86ee7}\label{classKB_abf6528e5e8b106c9ec57dc6a8fb86ee7}} 
+\index{KB@{KB}!facts@{facts}}
+\index{facts@{facts}!KB@{KB}}
+\subsubsection{\texorpdfstring{facts}{facts}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classSentence}{Sentence}}$>$ K\+B\+::facts\hspace{0.3cm}{\ttfamily [private]}}
+
+A collection of the facts contained in the knowledge base. \mbox{\Hypertarget{classKB_a41204b166f5cf54eac4d59df9f43c07a}\label{classKB_a41204b166f5cf54eac4d59df9f43c07a}} 
+\index{KB@{KB}!rules@{rules}}
+\index{rules@{rules}!KB@{KB}}
+\subsubsection{\texorpdfstring{rules}{rules}}
+{\footnotesize\ttfamily vector$<$Rule$>$ K\+B\+::rules\hspace{0.3cm}{\ttfamily [private]}}
+
+A collection of rules used by the inference engine 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+Knowledge\+Base/\mbox{\hyperlink{KB_8h}{K\+B.\+h}}\item 
+src/\+Agent/\+Knowledge\+Base/K\+B.\+cpp\end{DoxyCompactItemize}

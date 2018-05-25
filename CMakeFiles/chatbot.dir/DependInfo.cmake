@@ -4,21 +4,21 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/Agent.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Agent/Agent.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Decomp.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Decomp.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Eliza.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Eliza.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Key.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Key.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Mapper.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Mapper.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Memory.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Memory.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Reasmb.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Reasmb.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Script.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Script.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Synonyms.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Synonyms.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/ELIZA/Thesaurus.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Thesaurus.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Agent/Parser.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Agent/Parser.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/Console/TerminalClient.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Client/Console/TerminalClient.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/GUI/GUIclient.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Client/GUI/GUIclient.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/Client/Web/WebClient.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/Client/Web/WebClient.cpp.o"
-  "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/src/utils/String.cpp" "/home/rand/code_dev/c++/ELIZA_PROJECT/chatbot/CMakeFiles/chatbot.dir/src/utils/String.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Agent/Agent.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Agent/Agent.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Agent/ELIZA/Decomp.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Decomp.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Agent/ELIZA/Eliza.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Eliza.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Agent/ELIZA/Key.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Key.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Agent/ELIZA/Mapper.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Mapper.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Agent/ELIZA/Memory.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Memory.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Agent/ELIZA/Reasmb.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Reasmb.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Agent/ELIZA/Script.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Script.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Agent/ELIZA/Synonyms.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Synonyms.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Agent/ELIZA/Thesaurus.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Agent/ELIZA/Thesaurus.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Agent/Parser.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Agent/Parser.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Client/Console/TerminalClient.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Client/Console/TerminalClient.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Client/GUI/GUIclient.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Client/GUI/GUIclient.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/Client/Web/WebClient.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/Client/Web/WebClient.cpp.o"
+  "/home/cyberemp/projects/c++/chatbot/src/utils/String.cpp" "/home/cyberemp/projects/c++/chatbot/CMakeFiles/chatbot.dir/src/utils/String.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
