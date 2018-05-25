@@ -1,0 +1,60 @@
+\hypertarget{classReasmb}{}\section{Reasmb Class Reference}
+\label{classReasmb}\index{Reasmb@{Reasmb}}
+
+
+Reassembly rule for decomposed sentence.  
+
+
+
+
+{\ttfamily \#include $<$Reasmb.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classReasmb_a3b2f5458d8810917c76cfaac15b749d4}\label{classReasmb_a3b2f5458d8810917c76cfaac15b749d4}} 
+{\bfseries Reasmb} (\mbox{\hyperlink{classDecomp}{Decomp}} $\ast$\mbox{\hyperlink{classReasmb_a70b89635a2cc4f04cd30ec0bcb0bd0bf}{decomp}}, const \mbox{\hyperlink{classString}{String}} \&\mbox{\hyperlink{classReasmb_a5f6b1b32f233f3dc7222f324791337c2}{rule}})
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classReasmb_abba1a0d8940231ac3e9ce7fd39173eb4}{reassemble}} (vector$<$ \mbox{\hyperlink{classString}{String}} $>$ matches)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classReasmb_a70b89635a2cc4f04cd30ec0bcb0bd0bf}\label{classReasmb_a70b89635a2cc4f04cd30ec0bcb0bd0bf}} 
+\mbox{\hyperlink{classDecomp}{Decomp}} $\ast$ \mbox{\hyperlink{classReasmb_a70b89635a2cc4f04cd30ec0bcb0bd0bf}{decomp}}
+\begin{DoxyCompactList}\small\item\em Pointer to parent decomposition rule. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classReasmb_a5f6b1b32f233f3dc7222f324791337c2}\label{classReasmb_a5f6b1b32f233f3dc7222f324791337c2}} 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classReasmb_a5f6b1b32f233f3dc7222f324791337c2}{rule}}
+\begin{DoxyCompactList}\small\item\em Reassembly rule pattern. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classReasmb_a705525beb8fb25cb1d4b9ba89b055e67}\label{classReasmb_a705525beb8fb25cb1d4b9ba89b055e67}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \mbox{\hyperlink{classReasmb}{Reasmb}} \&reasmb)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reassembly rule for decomposed sentence. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classReasmb_abba1a0d8940231ac3e9ce7fd39173eb4}\label{classReasmb_abba1a0d8940231ac3e9ce7fd39173eb4}} 
+\index{Reasmb@{Reasmb}!reassemble@{reassemble}}
+\index{reassemble@{reassemble}!Reasmb@{Reasmb}}
+\subsubsection{\texorpdfstring{reassemble()}{reassemble()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Reasmb\+::reassemble (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classString}{String}} $>$}]{matches }\end{DoxyParamCaption})}
+
+Reassembles sentence from matching expressions. 
+\begin{DoxyParams}{Parameters}
+{\em matches} & output of \mbox{\hyperlink{classDecomp_a5778e75423e33df37fe2e41157d3bc03}{Decomp\+::decompose}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reassembled response 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Reasmb.\+h\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Reasmb.\+cpp\end{DoxyCompactItemize}

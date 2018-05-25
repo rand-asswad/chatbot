@@ -1,0 +1,68 @@
+\hypertarget{classAnalyser}{}\section{Analyser Class Reference}
+\label{classAnalyser}\index{Analyser@{Analyser}}
+
+
+The analyser is responsible for the different parsing jobs that are used by the agent.  
+
+
+
+
+{\ttfamily \#include $<$Analyser.\+h$>$}
+
+Inheritance diagram for Analyser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAnalyser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Parse\+Tree \mbox{\hyperlink{classAnalyser_ad44df7523051fa8e152e1f623d00aa9a}{parse}} (\mbox{\hyperlink{classString}{String}} words, Grammar grammar)
+\begin{DoxyCompactList}\small\item\em This function creates a parse tree given a set of words and a grammar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Lexer \mbox{\hyperlink{classAnalyser_a4b5cb814df4274dbc426174a89b9838f}{lexer}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The analyser is responsible for the different parsing jobs that are used by the agent. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAnalyser_ad44df7523051fa8e152e1f623d00aa9a}\label{classAnalyser_ad44df7523051fa8e152e1f623d00aa9a}} 
+\index{Analyser@{Analyser}!parse@{parse}}
+\index{parse@{parse}!Analyser@{Analyser}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily Parse\+Tree Analyser\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{words,  }\item[{Grammar}]{grammar }\end{DoxyParamCaption})}
+
+
+
+This function creates a parse tree given a set of words and a grammar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & The words to be transformed into a parse tree. \\
+\hline
+{\em grammar} & The grammar of the language in question. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A parse tree. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classAnalyser_a4b5cb814df4274dbc426174a89b9838f}\label{classAnalyser_a4b5cb814df4274dbc426174a89b9838f}} 
+\index{Analyser@{Analyser}!lexer@{lexer}}
+\index{lexer@{lexer}!Analyser@{Analyser}}
+\subsubsection{\texorpdfstring{lexer}{lexer}}
+{\footnotesize\ttfamily Lexer Analyser\+::lexer}
+
+The lexer that is used by the analyser. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+Knowledge\+Base/\mbox{\hyperlink{Analyser_8h}{Analyser.\+h}}\end{DoxyCompactItemize}

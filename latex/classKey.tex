@@ -1,0 +1,69 @@
+\hypertarget{classKey}{}\section{Key Class Reference}
+\label{classKey}\index{Key@{Key}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKey_a36c3d526f01554925ff00ccc03f7c353}\label{classKey_a36c3d526f01554925ff00ccc03f7c353}} 
+\mbox{\hyperlink{classKey_a36c3d526f01554925ff00ccc03f7c353}{Key}} (const \mbox{\hyperlink{classString}{String}} \&\mbox{\hyperlink{classKey_a2e5239c4a662635b68778364afd46a96}{name}}, int \mbox{\hyperlink{classKey_ad960b9e4804c3cb039a816811bae4839}{rank}})
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDecomp}{Decomp}} $\ast$ \mbox{\hyperlink{classKey_aef5468eea2222639cf3bb839cdd6e6af}{new\+Decomp}} (\mbox{\hyperlink{classString}{String}} script\+Line, \mbox{\hyperlink{classThesaurus}{Thesaurus}} thesaurus)
+\item 
+\mbox{\hyperlink{classDecomp}{Decomp}} $\ast$ \mbox{\hyperlink{classKey_ad1ee86395985a3b7e6715597c777eeec}{find\+Decomp}} (\mbox{\hyperlink{classString}{String}} str)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKey_a2e5239c4a662635b68778364afd46a96}\label{classKey_a2e5239c4a662635b68778364afd46a96}} 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classKey_a2e5239c4a662635b68778364afd46a96}{name}}
+\begin{DoxyCompactList}\small\item\em Unique key name (identifier) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKey_ad960b9e4804c3cb039a816811bae4839}\label{classKey_ad960b9e4804c3cb039a816811bae4839}} 
+int \mbox{\hyperlink{classKey_ad960b9e4804c3cb039a816811bae4839}{rank}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classKey}{Key}} rank. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKey_a48cc30fe4323cd4a0109bdca4c19efd5}\label{classKey_a48cc30fe4323cd4a0109bdca4c19efd5}} 
+vector$<$ \mbox{\hyperlink{classDecomp}{Decomp}} $\ast$ $>$ \mbox{\hyperlink{classKey_a48cc30fe4323cd4a0109bdca4c19efd5}{decomp}}
+\begin{DoxyCompactList}\small\item\em List of decomposition rules for keyword. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKey_a79dc2e19cc4e5d3e4e77d835513e89ca}\label{classKey_a79dc2e19cc4e5d3e4e77d835513e89ca}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \mbox{\hyperlink{classKey}{Key}} \&key)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classKey_ad1ee86395985a3b7e6715597c777eeec}\label{classKey_ad1ee86395985a3b7e6715597c777eeec}} 
+\index{Key@{Key}!find\+Decomp@{find\+Decomp}}
+\index{find\+Decomp@{find\+Decomp}!Key@{Key}}
+\subsubsection{\texorpdfstring{find\+Decomp()}{findDecomp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDecomp}{Decomp}} $\ast$ Key\+::find\+Decomp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{str }\end{DoxyParamCaption})}
+
+Finds matching decomposition rule for a given string on a keyword using R\+E\+G\+EX. 
+\begin{DoxyParams}{Parameters}
+{\em str} & Raw string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to matching \mbox{\hyperlink{classDecomp}{Decomp}}, or nullptr if no match was found for \mbox{\hyperlink{classKey}{Key}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKey_aef5468eea2222639cf3bb839cdd6e6af}\label{classKey_aef5468eea2222639cf3bb839cdd6e6af}} 
+\index{Key@{Key}!new\+Decomp@{new\+Decomp}}
+\index{new\+Decomp@{new\+Decomp}!Key@{Key}}
+\subsubsection{\texorpdfstring{new\+Decomp()}{newDecomp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDecomp}{Decomp}} $\ast$ Key\+::new\+Decomp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{script\+Line,  }\item[{\mbox{\hyperlink{classThesaurus}{Thesaurus}}}]{thesaurus }\end{DoxyParamCaption})}
+
+Creates new decomposition object, adds it to \mbox{\hyperlink{classKey_a48cc30fe4323cd4a0109bdca4c19efd5}{Key.\+decomp}} and links it with the parent \mbox{\hyperlink{classKey}{Key}} object. 
+\begin{DoxyParams}{Parameters}
+{\em script\+Line} & output string from \mbox{\hyperlink{classScript_a946d037839b4caada09e22a428c8f42e}{Script\+::extract\+Pattern}} \\
+\hline
+{\em thesaurus} & \mbox{\hyperlink{classScript_afaaa5f986fb3638e31c51231408cfbeb}{Script.\+thes}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to created \mbox{\hyperlink{classDecomp}{Decomp}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Key.\+h\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Key.\+cpp\end{DoxyCompactItemize}

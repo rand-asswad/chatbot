@@ -1,0 +1,146 @@
+\hypertarget{classEliza}{}\section{Eliza Class Reference}
+\label{classEliza}\index{Eliza@{Eliza}}
+
+
+\mbox{\hyperlink{classAgent}{Agent}} based on Weizenbaum\textquotesingle{}s E\+L\+I\+ZA conversational agent.  
+
+
+
+
+{\ttfamily \#include $<$Eliza.\+h$>$}
+
+Inheritance diagram for Eliza\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEliza}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEliza_a6246b8f323f27e7b5762560ad4ad7c11}{Eliza}} (istream $\ast$input, ostream $\ast$output, \mbox{\hyperlink{classString}{String}} source\+Path)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEliza_aa4f2c7a48333da7b14c5e24c1bd49f51}\label{classEliza_aa4f2c7a48333da7b14c5e24c1bd49f51}} 
+\mbox{\hyperlink{classScript}{Script}} $\ast$ \mbox{\hyperlink{classEliza_aa4f2c7a48333da7b14c5e24c1bd49f51}{script}}
+\begin{DoxyCompactList}\small\item\em Database parser for E\+L\+I\+ZA. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEliza_a2414a3a9a6e096752a27ae5140068c17}\label{classEliza_a2414a3a9a6e096752a27ae5140068c17}} 
+\mbox{\hyperlink{classMemory}{Memory}} \mbox{\hyperlink{classEliza_a2414a3a9a6e096752a27ae5140068c17}{memory}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classMemory}{Memory}} stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classEliza_a9700906fb44016db11cd1183d5a1f1f3}{process\+Input}} (\mbox{\hyperlink{classString}{String}} input) override
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classEliza_a87224cd89d0e0dafbc2e8883d1a83f14}{greet\+User}} () override
+\item 
+vector$<$ \mbox{\hyperlink{classKey}{Key}} $\ast$ $>$ \mbox{\hyperlink{classEliza_adb573920365f86efd4974fa1af6e4f47}{collect\+Keys}} (\mbox{\hyperlink{classString}{String}} input)
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classEliza_a388dad084acdf7310dc1028bdee044f2}{process\+Sentence}} (\mbox{\hyperlink{classString}{String}} input)
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classEliza_a74fbfaf3553aa9224ba10ef0881d6f14}{decompose\+On\+Key}} (\mbox{\hyperlink{classDecomp}{Decomp}} $\ast$decomp, \mbox{\hyperlink{classString}{String}} input)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classAgent}{Agent}} based on Weizenbaum\textquotesingle{}s E\+L\+I\+ZA conversational agent. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEliza_a6246b8f323f27e7b5762560ad4ad7c11}\label{classEliza_a6246b8f323f27e7b5762560ad4ad7c11}} 
+\index{Eliza@{Eliza}!Eliza@{Eliza}}
+\index{Eliza@{Eliza}!Eliza@{Eliza}}
+\subsubsection{\texorpdfstring{Eliza()}{Eliza()}}
+{\footnotesize\ttfamily Eliza\+::\+Eliza (\begin{DoxyParamCaption}\item[{istream $\ast$}]{input,  }\item[{ostream $\ast$}]{output,  }\item[{\mbox{\hyperlink{classString}{String}}}]{source\+Path }\end{DoxyParamCaption})}
+
+Default constructor for \mbox{\hyperlink{classEliza}{Eliza}}. Calls inherited constructor and sets \mbox{\hyperlink{classAgent_a18b65b5aff8b98ba9316d6b75b5fc365}{Agent.\+name}} and memory. See \mbox{\hyperlink{classAgent_a3db4a9cfcea636c9d63ec73729225fc8}{Agent.\+Agent()}} 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEliza_adb573920365f86efd4974fa1af6e4f47}\label{classEliza_adb573920365f86efd4974fa1af6e4f47}} 
+\index{Eliza@{Eliza}!collect\+Keys@{collect\+Keys}}
+\index{collect\+Keys@{collect\+Keys}!Eliza@{Eliza}}
+\subsubsection{\texorpdfstring{collect\+Keys()}{collectKeys()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classKey}{Key}} $\ast$ $>$ Eliza\+::collect\+Keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Collects keywords from user input. 
+\begin{DoxyParams}{Parameters}
+{\em input} & user input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+keywords (sorted in descending order according to \mbox{\hyperlink{classKey_ad960b9e4804c3cb039a816811bae4839}{Key\+::rank}}) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEliza_a74fbfaf3553aa9224ba10ef0881d6f14}\label{classEliza_a74fbfaf3553aa9224ba10ef0881d6f14}} 
+\index{Eliza@{Eliza}!decompose\+On\+Key@{decompose\+On\+Key}}
+\index{decompose\+On\+Key@{decompose\+On\+Key}!Eliza@{Eliza}}
+\subsubsection{\texorpdfstring{decompose\+On\+Key()}{decomposeOnKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Eliza\+::decompose\+On\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDecomp}{Decomp}} $\ast$}]{decomp,  }\item[{\mbox{\hyperlink{classString}{String}}}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Decomposes input string on given decomposition rule. Calls\+:
+\begin{DoxyItemize}
+\item vector$<$\+String$>$ decomp\+::decompose(\+String input)
+\item Reasmb$\ast$ decomp\+::next\+Rule()
+\item \mbox{\hyperlink{classString}{String}} reasmb\+::reassemble(vector$<$\+String$>$ matches) 
+\begin{DoxyParams}{Parameters}
+{\em decomp} & pointer to decomposition rule \\
+\hline
+{\em input} & input string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reassembled string 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\mbox{\Hypertarget{classEliza_a87224cd89d0e0dafbc2e8883d1a83f14}\label{classEliza_a87224cd89d0e0dafbc2e8883d1a83f14}} 
+\index{Eliza@{Eliza}!greet\+User@{greet\+User}}
+\index{greet\+User@{greet\+User}!Eliza@{Eliza}}
+\subsubsection{\texorpdfstring{greet\+User()}{greetUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Eliza\+::greet\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Generates greeting at the beginning of the conversation. \begin{DoxyReturn}{Returns}
+output string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAgent_a753289e615d0fbe962453695e41bd0b6}{Agent}}.
+
+\mbox{\Hypertarget{classEliza_a9700906fb44016db11cd1183d5a1f1f3}\label{classEliza_a9700906fb44016db11cd1183d5a1f1f3}} 
+\index{Eliza@{Eliza}!process\+Input@{process\+Input}}
+\index{process\+Input@{process\+Input}!Eliza@{Eliza}}
+\subsubsection{\texorpdfstring{process\+Input()}{processInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Eliza\+::process\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+Processes input string and generates response. 
+\begin{DoxyParams}{Parameters}
+{\em input} & User input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Processed output 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAgent_a8908483f8d1302ec8dd65539369de9bb}{Agent}}.
+
+\mbox{\Hypertarget{classEliza_a388dad084acdf7310dc1028bdee044f2}\label{classEliza_a388dad084acdf7310dc1028bdee044f2}} 
+\index{Eliza@{Eliza}!process\+Sentence@{process\+Sentence}}
+\index{process\+Sentence@{process\+Sentence}!Eliza@{Eliza}}
+\subsubsection{\texorpdfstring{process\+Sentence()}{processSentence()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Eliza\+::process\+Sentence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Process individual sentences from input. 
+\begin{DoxyParams}{Parameters}
+{\em input} & broken user sentence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+processed answer 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Eliza.\+h\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Eliza.\+cpp\end{DoxyCompactItemize}

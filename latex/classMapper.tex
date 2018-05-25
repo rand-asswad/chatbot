@@ -1,0 +1,63 @@
+\hypertarget{classMapper}{}\section{Mapper Class Reference}
+\label{classMapper}\index{Mapper@{Mapper}}
+
+
+Hash table for pre/post script elements.  
+
+
+
+
+{\ttfamily \#include $<$Mapper.\+h$>$}
+
+Inheritance diagram for Mapper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMapper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMapper_aec2d64e739da82af037709cb63d52064}{map}} (\mbox{\hyperlink{classString}{String}} src, \mbox{\hyperlink{classString}{String}} dst)
+\item 
+\mbox{\hyperlink{classString}{String}} \mbox{\hyperlink{classMapper_a5badcd576626a91fc9b0f76345a64ba8}{translate}} (\mbox{\hyperlink{classString}{String}} sentence)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Hash table for pre/post script elements. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMapper_aec2d64e739da82af037709cb63d52064}\label{classMapper_aec2d64e739da82af037709cb63d52064}} 
+\index{Mapper@{Mapper}!map@{map}}
+\index{map@{map}!Mapper@{Mapper}}
+\subsubsection{\texorpdfstring{map()}{map()}}
+{\footnotesize\ttfamily void Mapper\+::map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{src,  }\item[{\mbox{\hyperlink{classString}{String}}}]{dst }\end{DoxyParamCaption})}
+
+Adds a new element to hash table. 
+\begin{DoxyParams}{Parameters}
+{\em src} & key \\
+\hline
+{\em dst} & value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMapper_a5badcd576626a91fc9b0f76345a64ba8}\label{classMapper_a5badcd576626a91fc9b0f76345a64ba8}} 
+\index{Mapper@{Mapper}!translate@{translate}}
+\index{translate@{translate}!Mapper@{Mapper}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classString}{String}} Mapper\+::translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classString}{String}}}]{sentence }\end{DoxyParamCaption})}
+
+Translates keywords in a sentence into their values from the hash table. 
+\begin{DoxyParams}{Parameters}
+{\em sentence} & string of words \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Translated sentence 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Mapper.\+h\item 
+src/\+Agent/\+E\+L\+I\+Z\+A/Mapper.\+cpp\end{DoxyCompactItemize}
