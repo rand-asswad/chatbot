@@ -65,15 +65,12 @@ void Script::parse() {
                 break;
             case 6: // key
                 currKey = this->newKey(match);
-                //cout << *currKey << endl;
                 break;
             case 7: // decomp
                 currDecomp = currKey->newDecomp(match, thes);
-                //cout << "\t" << *currDecomp << endl;
                 break;
             case 8: // reasmb
                 currDecomp->newReasmb(match);
-                //cout << "\t\t" << currDecomp->reassemb.back() << endl;
                 break;
             default: break;
         }
