@@ -6,10 +6,12 @@
 #include <iostream>
 using namespace std;
 /**
- * @brief This class represents a perception received by the agent (which is of an exclusive text form in our case).
- * 
  * @file Percept.h
  * @author Ergi, Rand, yuge
+ */
+
+/**
+ * @brief This class represents a perception received by the agent (which is of an exclusive text form in our case).
  */
 class Percept {
 public: 

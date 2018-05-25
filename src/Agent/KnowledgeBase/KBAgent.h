@@ -7,10 +7,13 @@
 #include "KB.h"
 
 /**
- * @brief This class represents the knowledge based agent, an agent that is fed external stimuli (string-like perceptions) and generates plausible actions.
- * 
  * @file KBAgent.h
  * @author Ergi, Rand, Yuge
+ */
+
+
+/**
+ * @brief This class represents the knowledge based agent, an agent that is fed external stimuli (string-like perceptions) and generates plausible actions.
  */
 class KBAgent: public Agent {
 public: 

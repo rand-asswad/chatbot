@@ -6,10 +6,12 @@
 #include <iostream>
 using namespace std;
 /**
- * @brief This class represents a rule.
- * 
  * @file Rule.h
  * @author Ergi, Rand, Yuge
+ */
+
+/**
+ * @brief This class represents a rule.
  */
 class Rule {
 public: 

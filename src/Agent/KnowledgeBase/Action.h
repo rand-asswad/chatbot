@@ -4,11 +4,14 @@
 #include "Sentence.h"
 #include "KB.h"
 /**
+ * @file Action.h
+ * @author Ergi, Rand, Yuge
+ */
+
+/**
  * @brief Represents an action undertaken by the knowledge-based agent.
  * 
  * Due to the agent being a conversational one, the action will be represented by a string.
- * @file Action.h
- * @author Ergi, Rand, Yuge
  */
 class Action {
 public: 

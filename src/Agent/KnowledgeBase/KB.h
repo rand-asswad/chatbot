@@ -6,13 +6,15 @@
 #include "KBAnalyser.h"
 #include "Rule.h"
 /**
- * @brief This class represents our knowledge base.
- * 
- * The knowledge base holds all the logical sentences and facts which can later be used to infer new facts, ask the database and train the aforementioned.
- * 
  * @file KB.h
  * @author Ergi, Rand , Yuge
  */
+
+/**
+ * @brief This class represents our knowledge base.
+ * 
+ * The knowledge base holds all the logical sentences and facts which can later be used to infer new facts, ask the database and train the aforementioned.
+ */ 
 class KB {
 public: 
     /**
