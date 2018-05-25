@@ -4,11 +4,13 @@
 #include "../Parser.h"
 
 /**
- * @brief The analyser is responsible for the different parsing jobs that are used by the agent.
  * @file Analyser.h
  * @author Ergi, Rand, Yuge
  */
 
+/**
+ * @brief The analyser is responsible for the different parsing jobs that are used by the agent.
+ */
 class Analyser: public Parser {
 public: 
     Lexer lexer; /**< The lexer that is used by the analyser.*/

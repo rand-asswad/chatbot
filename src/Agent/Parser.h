@@ -5,11 +5,9 @@
 #include "../utils/String.h"
 
 using namespace std;
+
 /**
- * @brief Abstract class representing a parser utilized by both agents.
- * @file Parser.h
- * @author Ergi, Rand, Yuge
-=======
+ * @brief Parses source file into appropriate data types.
  */
 class Parser {
 public:

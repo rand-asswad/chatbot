@@ -2,7 +2,6 @@ var searchData=
 [
   ['parse',['parse',['../classScript.html#a4bb2f5d77aed84a9f0dc9298894abd1c',1,'Script::parse()'],['../classAnalyser.html#ad44df7523051fa8e152e1f623d00aa9a',1,'Analyser::parse()'],['../classParser.html#a1df9aa58be0f4027a39277d78b870195',1,'Parser::parse()']]],
   ['parser',['Parser',['../classParser.html',1,'Parser'],['../classParser.html#a0561a18255812c46ece89f199ce337a8',1,'Parser::Parser()']]],
-  ['parser_2eh',['Parser.h',['../Parser_8h.html',1,'']]],
   ['pattern',['pattern',['../classDecomp.html#aa306bb725aade0708e3796b362b7eb50',1,'Decomp']]],
   ['percept',['Percept',['../classPercept.html',1,'']]],
   ['percept_2eh',['Percept.h',['../Percept_8h.html',1,'']]],
